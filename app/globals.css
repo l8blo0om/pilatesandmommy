@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #FFFFFF;
+  --color-foreground: #1A1A1A;
+
+  /* Brand palette */
+  --color-turquoise: #3ECFCF;
+  --color-turquoise-light: #A8ECEC;
+  --color-turquoise-dark: #2AAFAF;
+  --color-teal: #1B9E9E;
+  --color-teal-dark: #147070;
+  --color-green: #5BAD8F;
+  --color-green-light: #B2DFD0;
+  --color-cream: #F9F8F5;
+  --color-stone: #EAE8E3;
+  --color-charcoal: #1A1A1A;
+  --color-muted: #6B7280;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFFFFF;
+  color: #1A1A1A;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Remove dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #1A1A1A;
+  }
+}
+
+/* Utility classes */
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth hover transitions */
+a, button {
+  transition: all 0.2s ease;
+}
