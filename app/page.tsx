@@ -186,7 +186,7 @@ export default function HomePage() {
             Become a certified<br /><em>Pilates & Mommy instructor</em>
           </h2>
           <p className="mt-4 text-white/80 font-light max-w-lg mx-auto">
-            Our LA-accredited certification is designed for instructors who want to specialize in maternal wellness.
+            Our certification is designed for instructors who want to specialize in maternal wellness.
             Train online. Teach with confidence. Change lives.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

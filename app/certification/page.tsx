@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'LA Pilates Certification | Pilates & Mommy',
-  description: 'Become a certified Pilates & Mommy instructor. LA-accredited training for maternal wellness specialists worldwide.',
+  title: 'Certification | Pilates & Mommy',
+  description: 'Become a certified Pilates & Mommy instructor. Specialized training for maternal wellness specialists worldwide.',
 };
 
 const modules = [
@@ -22,11 +22,11 @@ export default function CertificationPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs tracking-[0.25em] uppercase text-white/70 font-medium mb-4">For Instructors Worldwide</p>
           <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 300, color: 'white', lineHeight: 1.1 }}>
-            LA Pilates & Mommy<br />
+            Pilates & Mommy<br />
             <em style={{ fontStyle: 'italic' }}>Certification</em>
           </h1>
           <p className="mt-6 text-white/80 font-light max-w-xl mx-auto">
-            The only certification that combines LA Pilates methodology with specialized maternal wellness training.
+            The only certification that combines Pilates methodology with specialized maternal wellness training.
             Teach prenatal and postpartum clients with confidence.
           </p>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
@@ -49,7 +49,7 @@ export default function CertificationPage() {
             {[
               ['100%', 'Online Learning'],
               ['6', 'Comprehensive Modules'],
-              ['LA', 'Accredited'],
+              ['P&M', 'Certified'],
               ['50+', 'Grads & Counting'],
             ].map(([val, label]) => (
               <div key={label} className="p-6">
