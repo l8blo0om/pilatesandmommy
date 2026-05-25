@@ -33,21 +33,28 @@ export default function AboutPage() {
           <div>
             <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2.2rem', fontWeight: 300 }}
               className="mb-6">
-              The Why
+              Meet Dr. Niia Bishop
             </h2>
             <div className="space-y-4 text-gray-600 font-light leading-relaxed">
               <p>
-                Pilates & Mommy was founded with one belief: every mother deserves to feel powerful in her body —
-                before, during, and long after pregnancy. We saw a gap in the wellness world. Too many programs
-                ignored the unique needs of the maternal body.
+                Niia Bishop's relationship with movement began early — as a scholarship student at the Alvin Ailey
+                School of Dance, she trained in ballet, modern, African, and jazz, before going on to dance
+                professionally in companies across Massachusetts and New York.
               </p>
               <p>
-                We built something different. A space that is clinical enough to be effective, warm enough to feel
-                like home, and luxurious enough to remind every mama that she is worth it.
+                After earning her PhD in Comparative Literature from the University of Michigan — where her academic
+                work centered on mindfulness, meditation, and the body — Niia discovered Pilates. What started with
+                a DVD at home became a certification in mat and machine Pilates in 2007, and a lifelong calling.
               </p>
               <p>
-                Based in Columbia, SC, we serve our local community with in-studio classes and we reach
-                instructors worldwide through our LA Certification program.
+                In 2009, with the birth of her son Reza, Pilates & Mommy was born. Niia created one of the first
+                Mommy & Me Pilates programs in the country, teaching across NYC, Long Island, and Buffalo before
+                bringing her work to the South Carolina community she now calls home.
+              </p>
+              <p>
+                Today, Dr. Bishop is a Club Pilates instructor in Forest Acres, SC and an Assistant Professor at
+                Allen University — and she remains devoted to helping mothers reconnect with their strength, their
+                bodies, and themselves.
               </p>
             </div>
             <Link href="/classes"
