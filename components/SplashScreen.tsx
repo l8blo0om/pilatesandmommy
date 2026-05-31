@@ -6,7 +6,6 @@ export default function SplashScreen() {
   const [visible, setVisible] = useState(true);
   const [leaving, setLeaving] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [showPlayer, setShowPlayer] = useState(false);
 
   useEffect(() => {
     const seen = sessionStorage.getItem('splash-seen');
@@ -80,10 +79,10 @@ export default function SplashScreen() {
         </p>
         <p style={{
           fontFamily: 'Inter, sans-serif',
-          fontSize: '0.85rem',
-          color: 'rgba(255,255,255,0.6)',
+          fontSize: '0.8rem',
+          color: 'rgba(255,255,255,0.55)',
           marginTop: '0.75rem',
-          letterSpacing: '0.08em',
+          letterSpacing: '0.1em',
           fontWeight: 300,
         }}>
           Pilates · Community · Certification
@@ -99,7 +98,7 @@ export default function SplashScreen() {
       }}>
         <button
           onClick={handleEnter}
-          className="group flex items-center gap-3 px-12 py-4 rounded-full text-sm font-medium"
+          className="group flex items-center gap-3 px-12 py-4 rounded-full"
           style={{
             background: 'rgba(255,255,255,0.18)',
             border: '1px solid rgba(255,255,255,0.45)',
@@ -109,6 +108,7 @@ export default function SplashScreen() {
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             fontSize: '0.75rem',
+            fontWeight: 500,
           }}
         >
           <span>Enter</span>
@@ -117,51 +117,40 @@ export default function SplashScreen() {
         </button>
       </div>
 
-      {/* Music toggle — bottom of screen */}
+      {/* Music link */}
       <div
-        className="absolute bottom-8 flex flex-col items-center gap-3"
+        className="absolute bottom-8 flex flex-col items-center gap-2"
         style={{
           opacity: mounted ? 1 : 0,
           transition: 'opacity 1s ease 1.1s',
         }}
       >
-        {/* Sliding player */}
-        <div style={{
-          maxHeight: showPlayer ? '200px' : '0px',
-          overflow: 'hidden',
-          transition: 'max-height 0.5s ease',
-          width: '320px',
-        }}>
-          <iframe
-            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-            frameBorder="0"
-            height="175"
-            style={{ width: '100%', borderRadius: '14px', display: 'block' }}
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-            src="https://embed.music.apple.com/us/album/touch%C3%A9-pussycat-vol-1/1889648702"
-          />
-        </div>
-
-        {/* Music note toggle */}
-        <button
-          onClick={() => setShowPlayer(p => !p)}
-          className="flex items-center gap-2"
+        <a
+          href="https://music.apple.com/us/album/touch%C3%A9-pussycat-vol-1/1889648702"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 group"
           style={{
-            color: showPlayer ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)',
+            color: 'rgba(255,255,255,0.4)',
             fontSize: '0.7rem',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
+            textDecoration: 'none',
             transition: 'color 0.3s ease',
           }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          {/* Music note icon */}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
           </svg>
-          <span>{showPlayer ? 'Hide player' : 'Now playing'}</span>
-        </button>
+          <span>Now playing on Apple Music</span>
+          {/* Apple Music logo */}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+            <path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.762-.726 10.338 10.338 0 00-1.775-.233c-.259-.012-.52-.014-.775-.014H6.75c-.255 0-.516.002-.775.014A10.338 10.338 0 004.2.165a5.022 5.022 0 00-1.762.726C1.32 1.624.575 2.624.258 3.934a9.23 9.23 0 00-.24 2.19C.006 6.386 0 6.644 0 6.9v10.2c0 .256.006.514.018.776a9.23 9.23 0 00.24 2.19c.317 1.31 1.062 2.31 2.18 3.043a5.022 5.022 0 001.762.726c.58.13 1.175.205 1.775.233.259.012.52.014.775.014h10.5c.255 0 .516-.002.775-.014a10.338 10.338 0 001.775-.233 5.022 5.022 0 001.762-.726c1.118-.734 1.863-1.734 2.18-3.043a9.23 9.23 0 00.24-2.19c.012-.262.018-.52.018-.776V6.9c0-.256-.006-.514-.018-.776zM12 18.5c-3.584 0-6.5-2.916-6.5-6.5S8.416 5.5 12 5.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5zm0-10.5c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6.5c-1.378 0-2.5-1.122-2.5-2.5S10.622 9.5 12 9.5s2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5z"/>
+          </svg>
+        </a>
       </div>
     </div>
   );
