@@ -157,7 +157,7 @@ export default function SplashScreen() {
                   style={{
                     width: '3px',
                     borderRadius: '2px',
-                    background: 'rgba(255,255,255,0.8)',
+                    background: 'rgba(255,255,255,0.7)',
                     animation: `eq-bar ${0.6 + i * 0.15}s ease-in-out infinite alternate`,
                     height: `${[8, 14, 10, 6][i - 1]}px`,
                   }}
@@ -165,20 +165,10 @@ export default function SplashScreen() {
               ))}
             </div>
 
-            {/* Text */}
-            <div>
-              <p style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0, lineHeight: 1 }}>
-                Now playing
-              </p>
-              <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', margin: '2px 0 0', lineHeight: 1, fontWeight: 500 }}>
-                Touché Pussycat Vol. 1
-              </p>
-            </div>
-
-            {/* Apple Music icon */}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.4)">
-              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-            </svg>
+            {/* Label */}
+            <p style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>
+              Now playing
+            </p>
           </div>
         </a>
       </div>
