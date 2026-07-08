@@ -57,30 +57,40 @@ export default function HomePage() {
           </div>
 
           {/* Hero visual — full column */}
-          <div className="hidden lg:flex flex-col gap-6">
-            {/* Modern frame */}
-            <div className="relative" style={{ padding: '6px', borderRadius: '28px', background: 'linear-gradient(135deg, #3ECFCF, #5BAD8F)' }}>
-              {/* Inner white frame */}
-              <div className="relative overflow-hidden bg-white" style={{ borderRadius: '22px', height: '500px' }}>
-                <Image
-                  src="/logo-icon-white-bg.png"
-                  alt="Pilates & Mommy"
-                  fill
-                  className="object-cover scale-[1.08]"
-                  priority
-                />
-                {/* Subtle corner accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-1"
-                  style={{ background: 'linear-gradient(90deg, #3ECFCF, #5BAD8F)' }} />
+          <div className="hidden lg:flex flex-col gap-5">
+            {/* Logo mark */}
+            <div className="flex justify-center">
+              <div className="relative" style={{ padding: '5px', borderRadius: '22px', background: 'linear-gradient(135deg, #3ECFCF, #5BAD8F)' }}>
+                <div className="relative overflow-hidden bg-white" style={{ borderRadius: '17px', width: '120px', height: '120px' }}>
+                  <Image
+                    src="/logo-icon-white-bg.png"
+                    alt="Pilates & Mommy"
+                    fill
+                    className="object-cover scale-[1.08]"
+                    priority
+                  />
+                </div>
               </div>
             </div>
-            {/* Quote below */}
-            <div className="text-center">
-              <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', color: '#1A1A1A', fontWeight: 300 }}
-                className="leading-snug italic">
-                &ldquo;Your body grew a human. Let us help it thrive.&rdquo;
-              </p>
-              <p className="mt-2 text-xs text-gray-400 tracking-widest uppercase">Pilates & Mommy</p>
+
+            {/* Hero video */}
+            <div className="relative overflow-hidden" style={{ borderRadius: '24px', height: '420px' }}>
+              <video
+                src="/videos/0f70b6ba-32df-4738-a1bd-5948040545c6.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(27,158,158,0.4) 0%, transparent 60%)' }} />
+              <div className="absolute bottom-6 left-6 right-6">
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}
+                  className="italic">
+                  &ldquo;Your body grew a human.<br />Let us help it thrive.&rdquo;
+                </p>
+                <p className="mt-1 text-xs text-white/60 tracking-widest uppercase">Pilates & Mommy</p>
+              </div>
             </div>
           </div>
         </div>
