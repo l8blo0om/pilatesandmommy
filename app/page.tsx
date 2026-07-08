@@ -238,6 +238,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* VIDEO REEL */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">In Motion</p>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center' }}
+            className="mb-12">
+            See what we do
+          </h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              '0f70b6ba-32df-4738-a1bd-5948040545c6',
+              '39baef77-b256-4892-95e9-027560b0667b',
+              '6d0aaddc-767d-4797-879c-72d197e52b51',
+              '948d4fbc-a1e6-442e-b11a-ae054f59b044',
+            ].map((id) => (
+              <div key={id} className="relative overflow-hidden rounded-2xl aspect-[9/16] bg-stone-100">
+                <video
+                  src={`/videos/${id}.mp4`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(27,158,158,0.25), transparent)' }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* NEWSLETTER CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-xl mx-auto px-6 text-center">
