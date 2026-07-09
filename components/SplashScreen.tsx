@@ -22,196 +22,231 @@ export default function SplashScreen() {
     setTimeout(() => {
       sessionStorage.setItem('splash-seen', 'true');
       setVisible(false);
-    }, 800);
-  };
-
-  const handleStartWithMusic = () => {
-    setShowPlayer(true);
+    }, 1000);
   };
 
   if (!visible) return null;
 
   return (
     <div
-      className="splash-bg fixed inset-0 z-[9999] flex flex-col items-center justify-center px-6"
+      className="fixed inset-0 z-[9999] overflow-hidden"
       style={{
         opacity: leaving ? 0 : 1,
-        transform: leaving ? 'scale(1.04)' : 'scale(1)',
-        transition: 'opacity 0.8s ease, transform 0.8s ease',
+        transition: 'opacity 1s ease',
       }}
     >
-      {/* Blobs */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10"
-        style={{ background: 'radial-gradient(circle, #fff, transparent)', transform: 'translate(30%, -30%)' }} />
-      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-10"
-        style={{ background: 'radial-gradient(circle, #B2DFD0, transparent)', transform: 'translate(-30%, 30%)' }} />
+      {/* Full-screen video */}
+      <video
+        src="/videos/0f70b6ba-32df-4738-a1bd-5948040545c6.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      {/* Logo */}
-      <div style={{
-        opacity: mounted ? 1 : 0,
-        transform: mounted ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 1s ease 0.2s, transform 1s ease 0.2s',
-      }}>
-        <Image
-          src="/logo.png"
-          alt="Pilates & Mommy"
-          width={220}
-          height={220}
-          className="w-40 h-40 object-contain drop-shadow-2xl"
-          priority
-        />
-      </div>
+      {/* Cinematic dark overlay — deeper at bottom for text legibility */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(5,30,30,0.55) 50%, rgba(5,30,30,0.78) 100%)',
+        }}
+      />
 
-      {/* Tagline */}
-      <div style={{
-        opacity: mounted ? 1 : 0,
-        transform: mounted ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 1s ease 0.5s, transform 1s ease 0.5s',
-        textAlign: 'center',
-        marginTop: '1rem',
-      }}>
-        <p style={{
-          fontFamily: 'Cormorant Garamond, Georgia, serif',
-          fontSize: 'clamp(1.8rem, 5vw, 3rem)',
-          fontWeight: 300,
-          color: 'white',
-          letterSpacing: '0.02em',
-          lineHeight: 1.15,
+      {/* Subtle brand hue wash — inherits the CSS animation */}
+      <div
+        className="splash-bg absolute inset-0"
+        style={{ opacity: 0.22, mixBlendMode: 'color' }}
+      />
+
+      {/* Content stack */}
+      <div className="relative h-full flex flex-col items-center justify-center px-8 text-center">
+
+        {/* Logo */}
+        <div style={{
+          opacity: mounted ? 1 : 0,
+          transform: mounted ? 'translateY(0)' : 'translateY(-12px)',
+          transition: 'opacity 1.4s ease 0.1s, transform 1.4s ease 0.1s',
+          marginBottom: '2rem',
         }}>
-          Movement made<br />
-          <em>for mamas.</em>
-        </p>
-        <p style={{
-          fontSize: '0.75rem',
-          color: 'rgba(255,255,255,0.5)',
-          marginTop: '0.6rem',
-          letterSpacing: '0.1em',
-          fontWeight: 300,
+          <Image
+            src="/logo.png"
+            alt="Pilates & Mommy"
+            width={120}
+            height={120}
+            className="w-24 h-24 object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
+
+        {/* Main headline */}
+        <div style={{
+          opacity: mounted ? 1 : 0,
+          transform: mounted ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'opacity 1.4s ease 0.45s, transform 1.4s ease 0.45s',
+          maxWidth: '680px',
         }}>
-          Pilates · Community · Certification
-        </p>
-      </div>
+          <h1 style={{
+            fontFamily: 'Cormorant Garamond, Georgia, serif',
+            fontSize: 'clamp(2.6rem, 6.5vw, 5.2rem)',
+            fontWeight: 300,
+            color: 'white',
+            letterSpacing: '-0.01em',
+            lineHeight: 1.1,
+          }}>
+            Strong mothers<br />
+            <em style={{ fontStyle: 'italic', fontWeight: 300 }}>build strong worlds.</em>
+          </h1>
+        </div>
 
-      {/* Spotify player — slides in when chosen */}
-      <div style={{
-        maxHeight: showPlayer ? '90px' : '0px',
-        overflow: 'hidden',
-        transition: 'max-height 0.6s ease',
-        marginTop: showPlayer ? '1.5rem' : '0',
-        width: '100%',
-        maxWidth: '340px',
-        opacity: mounted ? 1 : 0,
-        transitionProperty: 'max-height, margin-top, opacity',
-      }}>
-        <iframe
-          src="https://open.spotify.com/embed/album/3DtUmSSk0nbugBhsQfzBYL?utm_source=generator&theme=0"
-          width="100%"
-          height="80"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          style={{ borderRadius: '12px', display: 'block' }}
-        />
-      </div>
+        {/* Brand pillars */}
+        <div style={{
+          opacity: mounted ? 1 : 0,
+          transition: 'opacity 1.4s ease 0.85s',
+          marginTop: '1.75rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1.25rem',
+        }}>
+          {['Pilates', 'Education', 'Community'].map((p, i) => (
+            <>
+              <span
+                key={p}
+                style={{
+                  fontSize: '0.65rem',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.65)',
+                  fontWeight: 400,
+                }}
+              >
+                {p}
+              </span>
+              {i < 2 && (
+                <span
+                  key={`dot-${i}`}
+                  style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.45rem' }}
+                >
+                  ●
+                </span>
+              )}
+            </>
+          ))}
+        </div>
 
-      {/* Buttons */}
-      <div style={{
-        opacity: mounted ? 1 : 0,
-        transform: mounted ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 1s ease 0.8s, transform 1s ease 0.8s',
-        marginTop: '1.75rem',
-        display: 'flex',
-        gap: '0.75rem',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-      }}>
-        {!showPlayer && (
+        {/* Primary CTA */}
+        <div style={{
+          opacity: mounted ? 1 : 0,
+          transform: mounted ? 'translateY(0)' : 'translateY(16px)',
+          transition: 'opacity 1.4s ease 1.1s, transform 1.4s ease 1.1s',
+          marginTop: '3rem',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1.25rem',
+        }}>
           <button
-            onClick={handleStartWithMusic}
-            className="flex items-center gap-2"
+            onClick={handleEnter}
+            className="group"
             style={{
-              background: 'rgba(255,255,255,0.18)',
+              background: 'rgba(255,255,255,0.1)',
               border: '1px solid rgba(255,255,255,0.45)',
               color: 'white',
-              backdropFilter: 'blur(12px)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
               cursor: 'pointer',
-              letterSpacing: '0.12em',
+              letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              fontSize: '0.7rem',
-              fontWeight: 500,
-              padding: '0.85rem 1.5rem',
+              fontSize: '0.72rem',
+              fontWeight: 400,
+              padding: '1.1rem 4rem',
               borderRadius: '9999px',
+              transition: 'background 0.35s ease, border-color 0.35s ease, letter-spacing 0.35s ease',
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLButtonElement;
+              el.style.background = 'rgba(255,255,255,0.2)';
+              el.style.borderColor = 'rgba(255,255,255,0.75)';
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLButtonElement;
+              el.style.background = 'rgba(255,255,255,0.1)';
+              el.style.borderColor = 'rgba(255,255,255,0.45)';
             }}
           >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-            </svg>
-            Start with music
+            Begin
           </button>
-        )}
 
-        <button
-          onClick={handleEnter}
-          className="group flex items-center gap-2"
-          style={{
-            background: showPlayer ? 'rgba(255,255,255,0.92)' : 'transparent',
-            border: '1px solid rgba(255,255,255,0.45)',
-            color: showPlayer ? '#1B9E9E' : 'white',
-            backdropFilter: 'blur(12px)',
-            cursor: 'pointer',
+          {/* Music — whisper-level, not a feature */}
+          {!showPlayer && (
+            <button
+              onClick={() => setShowPlayer(true)}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'rgba(255,255,255,0.35)',
+                cursor: 'pointer',
+                fontSize: '0.62rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                padding: '0.5rem',
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.65)')}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.35)')}
+            >
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+              </svg>
+              Listen while you explore
+            </button>
+          )}
+        </div>
+
+        {/* Spotify player */}
+        <div style={{
+          maxHeight: showPlayer ? '90px' : '0px',
+          overflow: 'hidden',
+          transition: 'max-height 0.6s ease, margin-top 0.6s ease',
+          marginTop: showPlayer ? '1rem' : '0',
+          width: '100%',
+          maxWidth: '300px',
+        }}>
+          <iframe
+            src="https://open.spotify.com/embed/album/3DtUmSSk0nbugBhsQfzBYL?utm_source=generator&theme=0"
+            width="100%"
+            height="80"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style={{ borderRadius: '12px', display: 'block' }}
+          />
+        </div>
+
+        {/* Founder credential — anchored to bottom */}
+        <div style={{
+          position: 'absolute',
+          bottom: '2.25rem',
+          opacity: mounted ? 1 : 0,
+          transition: 'opacity 1.4s ease 1.5s',
+          textAlign: 'center',
+        }}>
+          <p style={{
+            fontSize: '0.6rem',
+            color: 'rgba(255,255,255,0.38)',
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
-            fontSize: '0.7rem',
-            fontWeight: 500,
-            padding: '0.85rem 2rem',
-            borderRadius: '9999px',
-            transition: 'background 0.4s ease, color 0.4s ease',
-          }}
-        >
-          <span>Enter</span>
-          <span className="group-hover:translate-x-1 inline-block" style={{ transition: 'transform 0.3s ease' }}>→</span>
-        </button>
-      </div>
+            lineHeight: 2,
+          }}>
+            Dr. Niia Bishop<br />
+            <span style={{ letterSpacing: '0.1em' }}>PhD · Comprehensive Pilates Instructor · Educator</span>
+          </p>
+        </div>
 
-      {/* Album credit */}
-      <div style={{
-        opacity: mounted ? 1 : 0,
-        transition: 'opacity 1s ease 1.1s',
-        marginTop: '1.25rem',
-        textAlign: 'center',
-      }}>
-        <a
-          href="https://open.spotify.com/album/3DtUmSSk0nbugBhsQfzBYL"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: 'rgba(255,255,255,0.35)',
-            fontSize: '0.65rem',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.4rem',
-            justifyContent: 'center',
-          }}
-          onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.35)')}
-        >
-          {/* Spotify icon */}
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-          </svg>
-          Center + Balance · Dr. Niia Bishop
-        </a>
       </div>
-
-      <style>{`
-        @keyframes eq-bar {
-          from { transform: scaleY(0.3); }
-          to   { transform: scaleY(1); }
-        }
-      `}</style>
     </div>
   );
 }
