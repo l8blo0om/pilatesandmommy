@@ -135,16 +135,20 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {classes.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden border border-stone-100 hover:shadow-md transition-shadow group">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={`https://images.unsplash.com/photo-${c.img}?w=600&h=400&fit=crop&q=80`}
-                    alt={c.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(27,158,158,0.15), rgba(91,173,143,0.3))' }} />
+                <div className="relative h-48 overflow-hidden flex items-center justify-center"
+                  style={{ background: 'linear-gradient(135deg, #1B9E9E 0%, #3ECFCF 50%, #5BAD8F 100%)' }}>
+                  <p style={{
+                    fontFamily: 'Cormorant Garamond, Georgia, serif',
+                    fontSize: '1.1rem',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.7)',
+                    letterSpacing: '0.05em',
+                    fontStyle: 'italic',
+                  }}>
+                    {c.title}
+                  </p>
                   <span className="absolute top-3 left-3 px-3 py-1 text-xs rounded-full text-white font-medium"
-                    style={{ background: 'rgba(27,158,158,0.85)', backdropFilter: 'blur(4px)' }}>
+                    style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: '1px solid rgba(255,255,255,0.3)' }}>
                     {c.tag}
                   </span>
                 </div>
@@ -163,19 +167,11 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-3xl h-80 lg:h-96 overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-DebBPSz260A?w=800&h=600&fit=crop&q=80"
-                alt="Postpartum wellness"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(27,158,158,0.5), rgba(91,173,143,0.4))' }} />
-              <div className="absolute inset-0 flex items-end p-8">
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
-                  The postpartum body is not broken.<br /><em>It is becoming.</em>
-                </p>
-              </div>
+            <div className="relative rounded-3xl h-80 lg:h-96 overflow-hidden flex items-end p-8"
+              style={{ background: 'linear-gradient(135deg, #0d6b6b 0%, #1B9E9E 50%, #5BAD8F 100%)' }}>
+              <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
+                The postpartum body is not broken.<br /><em>It is becoming.</em>
+              </p>
             </div>
             <div>
               <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-4">Education</p>
