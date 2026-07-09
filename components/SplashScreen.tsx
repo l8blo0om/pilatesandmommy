@@ -234,16 +234,37 @@ export default function SplashScreen() {
           transition: 'opacity 1.4s ease 1.5s',
           textAlign: 'center',
         }}>
-          <p style={{
-            fontSize: '0.6rem',
-            color: 'rgba(255,255,255,0.38)',
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase',
-            lineHeight: 2,
-          }}>
-            Dr. Niia Bishop<br />
-            <span style={{ letterSpacing: '0.1em' }}>PhD · Comprehensive Pilates Instructor · Educator</span>
-          </p>
+          <a
+            href="/about"
+            style={{
+              textDecoration: 'none',
+              display: 'inline-flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.3rem',
+              color: 'rgba(255,255,255,0.38)',
+              transition: 'color 0.25s ease',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.38)')}
+          >
+            <span style={{
+              fontSize: '0.65rem',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              fontWeight: 400,
+            }}>
+              Dr. Niia Bishop
+            </span>
+            <span style={{
+              fontSize: '0.55rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              lineHeight: 1.8,
+            }}>
+              PhD · Alvin Ailey Scholar · NDI Certified Dance Educator · Comprehensive Pilates Instructor
+            </span>
+          </a>
         </div>
 
       </div>
