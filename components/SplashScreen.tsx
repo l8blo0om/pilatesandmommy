@@ -33,9 +33,8 @@ export default function SplashScreen() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center px-6"
+      className="splash-bg fixed inset-0 z-[9999] flex flex-col items-center justify-center px-6"
       style={{
-        background: 'linear-gradient(160deg, #0d6b6b 0%, #1B9E9E 40%, #5BAD8F 100%)',
         opacity: leaving ? 0 : 1,
         transform: leaving ? 'scale(1.04)' : 'scale(1)',
         transition: 'opacity 0.8s ease, transform 0.8s ease',

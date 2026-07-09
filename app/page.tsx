@@ -11,7 +11,7 @@ const classes = [
 const testimonials = [
   { name: 'Jasmine T.', text: 'I found my body again after having my second baby. This place changed everything for me.' },
   { name: 'Renee M.', text: 'The postpartum classes were exactly what I needed. I felt seen and supported from day one.' },
-  { name: 'Coach Aisha W.', text: 'The LA Certification program was world-class. I am now teaching with so much more confidence.' },
+  { name: 'Coach Aisha W.', text: 'The Certification program was world-class. I am now teaching with so much more confidence.' },
 ];
 
 export default function HomePage() {
@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-stone-100 border border-stone-100 rounded-2xl overflow-hidden">
             {[
               { icon: '🧘‍♀️', title: 'Classes', sub: 'Book in-studio or virtual', href: '/classes' },
-              { icon: '🏆', title: 'Certify', sub: 'LA Pilates worldwide', href: '/certification' },
+              { icon: '🏆', title: 'Certify', sub: 'Pilates & Mommy worldwide', href: '/certification' },
               { icon: '🛍️', title: 'Shop', sub: 'Curated wellness goods', href: '/shop' },
               { icon: '💬', title: 'Community', sub: 'Moms supporting moms', href: '/community' },
             ].map((p) => (

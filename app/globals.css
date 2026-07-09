@@ -62,3 +62,39 @@ h1, h2, h3, h4 {
 a, button {
   transition: all 0.2s ease;
 }
+
+/* ─── Hue cycle — brand range only (teal → turquoise → sage) ─── */
+@property --hue {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 175;
+}
+
+:root {
+  --hue: 175;
+  animation: huecycle 22s linear infinite;
+}
+
+@keyframes huecycle {
+  0%   { --hue: 175; }
+  33%  { --hue: 162; }
+  66%  { --hue: 188; }
+  100% { --hue: 175; }
+}
+
+.splash-bg {
+  background: linear-gradient(
+    160deg,
+    hsl(calc(var(--hue) - 12), 78%, 18%) 0%,
+    hsl(var(--hue), 70%, 37%) 40%,
+    hsl(calc(var(--hue) + 18), 38%, 54%) 100%
+  );
+}
+
+.hue-accent {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--hue), 65%, 52%),
+    hsl(calc(var(--hue) + 20), 38%, 54%)
+  );
+}
