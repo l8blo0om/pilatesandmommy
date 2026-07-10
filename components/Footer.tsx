@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import VisitCounter from './VisitCounter';
 
 export default function Footer() {
   return (
@@ -72,7 +73,8 @@ export default function Footer() {
           <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} Pilates & Mommy. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
+            <VisitCounter />
             <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Privacy Policy</a>
             <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Terms of Service</a>
           </div>

@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     siteName: 'Pilates & Mommy',
     images: [
       {
-        url: '/logo.png',
-        width: 800,
-        height: 800,
-        alt: 'Pilates & Mommy',
+        url: '/logo-icon-pink-bg.png',
+        width: 1024,
+        height: 1024,
+        alt: 'Pilates & Mommy — felted kangaroo and joey logo',
       },
     ],
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pilates & Mommy — Movement for Every Stage of Motherhood',
     description: 'Pilates classes, postpartum wellness, certification, and community for moms — Columbia, SC.',
-    images: ['/logo.png'],
+    images: ['/logo-icon-pink-bg.png'],
   },
 };
 
