@@ -2,10 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const classes = [
-  { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: 'rEaEn6fxXnM' },
-  { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: 'hIxtxOHbMCI' },
-  { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: 'lnQF8Z32VHE' },
-  { title: 'Power Pilates', desc: 'Full-body reformer work for the mama ready to level up.', tag: 'In-Studio', img: '_J9hWa3DzuA' },
+  { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.png' },
+  { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.png' },
+  { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: '/images/class-mommy-me.png' },
+  { title: 'Power Pilates', desc: 'Full-body reformer work for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.png' },
 ];
 
 const testimonials = [
@@ -135,20 +135,16 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {classes.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden border border-stone-100 hover:shadow-md transition-shadow group">
-                <div className="relative h-48 overflow-hidden flex items-center justify-center"
-                  style={{ background: 'linear-gradient(135deg, #1B9E9E 0%, #3ECFCF 50%, #5BAD8F 100%)' }}>
-                  <p style={{
-                    fontFamily: 'Cormorant Garamond, Georgia, serif',
-                    fontSize: '1.1rem',
-                    fontWeight: 300,
-                    color: 'rgba(255,255,255,0.7)',
-                    letterSpacing: '0.05em',
-                    fontStyle: 'italic',
-                  }}>
-                    {c.title}
-                  </p>
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={c.img}
+                    alt={c.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(27,158,158,0.1), rgba(91,173,143,0.25))' }} />
                   <span className="absolute top-3 left-3 px-3 py-1 text-xs rounded-full text-white font-medium"
-                    style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: '1px solid rgba(255,255,255,0.3)' }}>
+                    style={{ background: 'rgba(27,158,158,0.85)', backdropFilter: 'blur(4px)' }}>
                     {c.tag}
                   </span>
                 </div>
@@ -167,11 +163,19 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-3xl h-80 lg:h-96 overflow-hidden flex items-end p-8"
-              style={{ background: 'linear-gradient(135deg, #0d6b6b 0%, #1B9E9E 50%, #5BAD8F 100%)' }}>
-              <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
-                The postpartum body is not broken.<br /><em>It is becoming.</em>
-              </p>
+            <div className="relative rounded-3xl h-80 lg:h-96 overflow-hidden">
+              <Image
+                src="/images/postpartum-spotlight.png"
+                alt="Postpartum wellness"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(13,107,107,0.45), rgba(91,173,143,0.35))' }} />
+              <div className="absolute inset-0 flex items-end p-8">
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
+                  The postpartum body is not broken.<br /><em>It is becoming.</em>
+                </p>
+              </div>
             </div>
             <div>
               <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-4">Education</p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Pilates & Mommy Certification — Become a Maternal Wellness Specialist',
@@ -31,22 +32,14 @@ export default function CertificationPage() {
       {/* HERO — full page, dark, cinematic */}
       <section style={{ minHeight: '94vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden' }}>
 
-        {/* Hero image placeholder */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(160deg, #062020 0%, #0d4040 35%, #1B9E9E 70%, #5BAD8F 100%)',
-        }} />
-
-        {/* Placeholder slot — swap this div for a real <video> or <Image> */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          opacity: 0.07,
-        }}>
-          <p style={{ color: 'white', fontSize: '0.65rem', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
-            Hero image / video · 1920 × 1080
-          </p>
-        </div>
+        {/* Hero image */}
+        <Image
+          src="/images/cert-hero.png"
+          alt="Pilates & Mommy Certification"
+          fill
+          className="object-cover"
+          priority
+        />
 
         {/* Dark vignette for text legibility */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%)' }} />
@@ -230,47 +223,36 @@ export default function CertificationPage() {
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
 
-            {/* Large image placeholder */}
-            <div style={{
-              borderRadius: '20px', aspectRatio: '3/4', gridRow: 'span 2',
-              background: 'linear-gradient(160deg, #1B9E9E, #0d6b6b)',
-              display: 'flex', alignItems: 'flex-end', padding: '1.5rem',
-            }}>
-              <div>
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.4rem', fontWeight: 300, color: 'white', lineHeight: 1.3, marginBottom: '0.5rem' }}>
-                  <em>Teaching changes<br />when you understand<br />the body completely.</em>
-                </p>
-                <p style={{ fontSize: '0.55rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-                  Photo · 3:4
+            {/* Tall left image */}
+            <div style={{ borderRadius: '20px', aspectRatio: '3/4', gridRow: 'span 2', position: 'relative', overflow: 'hidden' }}>
+              <Image src="/images/cert-editorial-tall.png" alt="Pilates instructor teaching" fill className="object-cover" />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)' }} />
+              <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', right: '1.5rem' }}>
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
+                  <em>Teaching changes when you understand the body completely.</em>
                 </p>
               </div>
             </div>
 
-            {/* Small image placeholder 1 */}
-            <div style={{
-              borderRadius: '20px', aspectRatio: '4/3',
-              background: 'linear-gradient(135deg, #3ECFCF, #5BAD8F)',
-              display: 'flex', alignItems: 'flex-end', padding: '1.25rem',
-            }}>
-              <div>
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1rem', fontWeight: 300, color: 'white', lineHeight: 1.3, marginBottom: '0.3rem' }}>
+            {/* Study image */}
+            <div style={{ borderRadius: '20px', aspectRatio: '4/3', position: 'relative', overflow: 'hidden' }}>
+              <Image src="/images/cert-study.png" alt="Online certification study" fill className="object-cover" />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
+              <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
                   Online. Self-paced. Yours.
                 </p>
-                <p style={{ fontSize: '0.55rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Photo · 4:3</p>
               </div>
             </div>
 
-            {/* Small image placeholder 2 */}
-            <div style={{
-              borderRadius: '20px', aspectRatio: '4/3',
-              background: 'linear-gradient(135deg, #5BAD8F, #1B9E9E)',
-              display: 'flex', alignItems: 'flex-end', padding: '1.25rem',
-            }}>
-              <div>
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1rem', fontWeight: 300, color: 'white', lineHeight: 1.3, marginBottom: '0.3rem' }}>
+            {/* Community image */}
+            <div style={{ borderRadius: '20px', aspectRatio: '4/3', position: 'relative', overflow: 'hidden' }}>
+              <Image src="/images/cert-community.png" alt="Community of certified instructors" fill className="object-cover" />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
+              <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
                   Join 50+ graduates worldwide.
                 </p>
-                <p style={{ fontSize: '0.55rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Photo · 4:3</p>
               </div>
             </div>
 
