@@ -92,19 +92,14 @@ export default function CertificationPage() {
       <section style={{ background: '#0d1f1f', padding: '4rem 1.5rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
 
-          {/* Photo placeholder */}
+          {/* Instructor portrait */}
           <div style={{
-            borderRadius: '20px', overflow: 'hidden', aspectRatio: '4/5',
-            background: 'linear-gradient(160deg, #1B9E9E, #5BAD8F)',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end',
+            borderRadius: '20px', overflow: 'hidden', aspectRatio: '4/5', position: 'relative',
+            display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
             padding: '1.5rem',
           }}>
-            <div style={{ width: '100%', flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.15 }}>
-              <p style={{ color: 'white', fontSize: '0.6rem', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-                Instructor portrait<br />4 : 5 ratio
-              </p>
-            </div>
-            <div style={{ width: '100%', padding: '1rem', background: 'rgba(0,0,0,0.35)', borderRadius: '12px', backdropFilter: 'blur(8px)' }}>
+            <Image src="/images/niia-portrait.png" alt="Dr. Niia Bishop" fill className="object-cover" />
+            <div style={{ position: 'relative', width: '100%', padding: '1rem', background: 'rgba(0,0,0,0.35)', borderRadius: '12px', backdropFilter: 'blur(8px)' }}>
               <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.1rem', fontWeight: 400, color: 'white', marginBottom: '0.2rem' }}>
                 Dr. Niia Bishop
               </p>
