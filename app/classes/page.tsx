@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { CALENDLY_URL } from '@/lib/booking';
 
 export const metadata = {
   title: 'Classes & Booking | Pilates & Mommy',
@@ -101,11 +101,11 @@ export default function ClassesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact"
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
                     className="block text-center px-6 py-3 text-sm font-medium text-white rounded-full"
                     style={{ background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)' }}>
                     Book This Class
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
