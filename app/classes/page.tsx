@@ -34,8 +34,8 @@ const classes = [
     title: 'Power Pilates',
     tag: 'All Levels',
     price: '$40 / class',
-    desc: 'Intermediate reformer and mat work for mamas who are ready to build serious strength, flexibility, and tone.',
-    features: ['Reformer work', 'Full-body strength', 'Flexibility & balance', 'In-studio & virtual'],
+    desc: 'Intermediate mat work for mamas ready to build serious strength, flexibility, and tone — no machines, just your body.',
+    features: ['Progressive mat work', 'Full-body strength', 'Flexibility & balance', 'In-studio & virtual'],
     color: '#F0FAFA',
   },
   {

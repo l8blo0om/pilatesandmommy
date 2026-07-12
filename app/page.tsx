@@ -5,7 +5,7 @@ const classes = [
   { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.png' },
   { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.png' },
   { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: '/images/class-mommy-me.png' },
-  { title: 'Power Pilates', desc: 'Full-body reformer work for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.png' },
+  { title: 'Power Pilates', desc: 'Full-body mat strength for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.png' },
 ];
 
 // Founder principles — Dr. Niia Bishop's own words (not customer testimonials).
