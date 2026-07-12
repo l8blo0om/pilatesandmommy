@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Pilates & Mommy Certification — Become a Maternal Wellness Specialist',
-  description: 'The only Pilates certification built specifically for maternal wellness. Train online. Teach with authority. Change careers.',
+  description: 'A maternal movement Pilates specialization developed by Dr. Niia Bishop. Train online. Teach with authority. Change careers.',
   openGraph: {
     title: 'Pilates & Mommy Certification',
     description: 'Train online with Dr. Niia Bishop. Specialize in prenatal and postpartum Pilates.',
@@ -18,12 +18,6 @@ const modules = [
   { num: '04', title: 'Postpartum Recovery Protocols', desc: 'Return-to-movement timelines, diastasis recti, C-section recovery, and hormonal considerations.' },
   { num: '05', title: 'Teaching Methodology', desc: 'Cueing, communication, class design, and the art of holding space for mothers in transition.' },
   { num: '06', title: 'Business & Brand Building', desc: 'Market your niche, build client trust, price your services, and grow a profitable maternal wellness practice.' },
-];
-
-const testimonials = [
-  { name: 'Maya R.', role: 'Pilates Instructor, Atlanta GA', quote: 'This certification gave me the confidence to work with postpartum clients I was previously afraid to touch. It filled every gap my general training left.' },
-  { name: 'Daniela C.', role: 'Personal Trainer, Miami FL', quote: 'I launched a prenatal program within 30 days of completing the course. My waitlist is already full.' },
-  { name: 'Priya S.', role: 'Yoga Teacher, NYC', quote: "Dr. Bishop's approach is rigorous and warm at the same time. It feels like the certification she always wished existed." },
 ];
 
 export default function CertificationPage() {
@@ -62,9 +56,9 @@ export default function CertificationPage() {
             <em style={{ fontStyle: 'italic', color: '#3ECFCF' }}>changes how you teach.</em>
           </h1>
           <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.65)', fontWeight: 300, lineHeight: 1.75, maxWidth: '560px', marginBottom: '2.5rem' }}>
-            The only Pilates certification built specifically for maternal wellness —
-            prenatal, postpartum, pelvic floor, and beyond. Train online with Dr. Niia Bishop.
-            Teach with authority. Build the practice you imagined.
+            A maternal movement specialization — prenatal, postpartum, pelvic floor, and beyond —
+            developed from two decades of Pilates, dance education, and embodied teaching.
+            Train online with Dr. Niia Bishop. Teach with authority. Build the practice you imagined.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/contact" style={{
@@ -145,7 +139,7 @@ export default function CertificationPage() {
           {[
             ['100%', 'Online & Self-Paced'],
             ['6', 'Core Modules'],
-            ['50+', 'Certified Graduates'],
+            ['PhD', 'Founder-Designed'],
             ['Lifetime', 'Content Access'],
           ].map(([val, label]) => (
             <div key={label}>
@@ -246,7 +240,7 @@ export default function CertificationPage() {
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
               <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
                 <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
-                  Join 50+ graduates worldwide.
+                  Learn alongside the founding cohort.
                 </p>
               </div>
             </div>
@@ -255,33 +249,29 @@ export default function CertificationPage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* FOUNDING COHORT */}
       <section style={{ background: 'white', padding: '5rem 1.5rem' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <p style={{ fontSize: '0.65rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1B9E9E', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
-            From Graduates
+        <div style={{ maxWidth: '720px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.65rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1B9E9E', fontWeight: 500, marginBottom: '1rem' }}>
+            Founding Cohort
           </p>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center', marginBottom: '3rem' }}>
-            What certified instructors say
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, marginBottom: '1.5rem' }}>
+            Be among the first to teach the method
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
-            {testimonials.map((t) => (
-              <div key={t.name} style={{ borderRadius: '16px', padding: '2rem', border: '1px solid #eee' }}>
-
-                {/* Testimonial image placeholder */}
-                <div style={{
-                  width: '48px', height: '48px', borderRadius: '50%', marginBottom: '1.25rem',
-                  background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)',
-                }} />
-
-                <p style={{ fontSize: '0.9rem', color: '#444', fontWeight: 300, lineHeight: 1.75, fontStyle: 'italic', marginBottom: '1.25rem' }}>
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <p style={{ fontSize: '0.8rem', fontWeight: 500, color: '#1B9E9E' }}>{t.name}</p>
-                <p style={{ fontSize: '0.7rem', color: '#aaa', fontWeight: 300, marginTop: '0.2rem' }}>{t.role}</p>
-              </div>
-            ))}
-          </div>
+          <p style={{ fontSize: '0.95rem', color: '#555', fontWeight: 300, lineHeight: 1.8, marginBottom: '2rem' }}>
+            This certification is newly open for enrollment. That means you won&rsquo;t find a wall of
+            testimonials here yet — you&rsquo;ll find something rarer: direct access to Dr. Bishop as
+            she trains her founding group of maternal movement specialists. Your work becomes the
+            first chapter of this method&rsquo;s story.
+          </p>
+          <Link href="/contact" style={{
+            display: 'inline-block', padding: '1.1rem 2.75rem',
+            fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.06em',
+            color: 'white', background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)',
+            borderRadius: '9999px', textDecoration: 'none',
+          }}>
+            Ask About the Founding Cohort
+          </Link>
         </div>
       </section>
 
@@ -366,7 +356,7 @@ export default function CertificationPage() {
             <em style={{ color: '#3ECFCF', fontStyle: 'italic' }}>deserve a specialist.</em>
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', fontWeight: 300, lineHeight: 1.8, marginBottom: '2.5rem' }}>
-            Train with the instructor who built this field.<br />
+            Train with Dr. Niia Bishop — two decades of Pilates, dance education, and a PhD.<br />
             Teach with the authority that comes from real knowledge.
           </p>
           <Link href="/contact" style={{

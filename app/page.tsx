@@ -8,10 +8,11 @@ const classes = [
   { title: 'Power Pilates', desc: 'Full-body reformer work for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.png' },
 ];
 
-const testimonials = [
-  { name: 'Jasmine T.', text: 'I found my body again after having my second baby. This place changed everything for me.' },
-  { name: 'Renee M.', text: 'The postpartum classes were exactly what I needed. I felt seen and supported from day one.' },
-  { name: 'Coach Aisha W.', text: 'The Certification program was world-class. I am now teaching with so much more confidence.' },
+// Founder principles — Dr. Niia Bishop's own words (not customer testimonials).
+const principles = [
+  { text: 'The postpartum body is not broken. It is becoming.' },
+  { text: 'A PhD and a warm welcome can exist in the same room.' },
+  { text: 'Mothers are not a niche.' },
 ];
 
 export default function HomePage() {
@@ -32,8 +33,9 @@ export default function HomePage() {
               <em style={{ fontStyle: 'italic', color: '#1B9E9E' }}>for mamas.</em>
             </h1>
             <p className="mt-6 text-base text-gray-500 font-light leading-relaxed max-w-md">
-              Pilates & Mommy is a luxury wellness brand for mothers at every stage — from bump to beyond.
-              Classes, community, a curated shop, and world-class certification for instructors.
+              A maternal movement method founded by Dr. Niia Bishop — PhD, dancer, and creator of
+              one of the country&rsquo;s first Mommy &amp; Me Pilates formats. Classes practice the
+              method. Certification teaches it. Community grows around it.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/classes"
@@ -47,7 +49,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="mt-12 flex gap-10">
-              {[['500+', 'Moms Served'], ['15+', 'Class Types'], ['50+', 'Certified Instructors']].map(([num, label]) => (
+              {[['2009', 'Method Founded'], ['PhD', 'Founder-Led'], ['6', 'Certification Modules']].map(([num, label]) => (
                 <div key={label}>
                   <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', fontWeight: 500, color: '#1B9E9E' }}>{num}</p>
                   <p className="text-xs text-gray-400 font-light tracking-wide">{label}</p>
@@ -184,10 +186,10 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 text-gray-500 font-light leading-relaxed">
                 Diastasis recti, pelvic floor dysfunction, hormonal shifts — navigating the postpartum body
-                can feel overwhelming. We break it all down and show you exactly how Pilates helps you heal.
+                can feel overwhelming. We break it down honestly and show you how thoughtful movement supports recovery.
               </p>
               <ul className="mt-6 space-y-3">
-                {['Diastasis recti & core recovery', 'Pelvic floor rehab through movement', 'Hormonal changes & body image', 'When to start — and what to avoid'].map((item) => (
+                {['Diastasis recti & core recovery', 'Pelvic floor-informed movement', 'Hormonal changes & body image', 'When to start — and what to avoid'].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-gray-600 font-light">
                     <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs"
                       style={{ background: '#3ECFCF' }}>✓</span>
@@ -229,22 +231,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* FOUNDER PRINCIPLES */}
       <section className="py-20 bg-[#F9F8F5]">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">Kind Words</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">What We Believe</p>
           <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center' }}
             className="mb-12">
-            Moms &amp; instructors love us
+            The ideas the method is built on
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-white rounded-2xl p-8 border border-stone-100">
-                <p className="text-gray-600 font-light leading-relaxed italic">&ldquo;{t.text}&rdquo;</p>
-                <p className="mt-6 text-sm font-medium text-[#1B9E9E]">— {t.name}</p>
+            {principles.map((p) => (
+              <div key={p.text} className="bg-white rounded-2xl p-8 border border-stone-100">
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }} className="text-xl text-gray-700 font-light leading-snug italic">
+                  &ldquo;{p.text}&rdquo;
+                </p>
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-xs text-gray-400 font-light">
+            Written by Dr. Niia Bishop. Client stories coming soon.
+          </p>
         </div>
       </section>
 

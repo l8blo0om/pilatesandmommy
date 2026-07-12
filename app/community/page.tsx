@@ -5,13 +5,6 @@ export const metadata = {
   description: 'Join the Pilates & Mommy community — a space for moms and instructors to connect, share, and grow.',
 };
 
-const posts = [
-  { name: 'Simone R.', time: '2 hours ago', text: 'Just finished my first Postpartum Restore class after 8 weeks. I actually cried. In a good way. 💙', likes: 34 },
-  { name: 'Instructor Layla T.', time: '5 hours ago', text: 'Graduated the LA Certification last month and already have 12 clients. Best investment I ever made in my teaching career.', likes: 89 },
-  { name: 'Destiny M.', time: '1 day ago', text: 'Question for the mamas: anyone find pilates helped with their postpartum anxiety? Would love to hear your experiences.', likes: 47 },
-  { name: 'Coach Renata V.', time: '2 days ago', text: 'Reminder that your core is healing, not failing. Give it grace. Give it time. Give it Pilates. 🌿', likes: 122 },
-];
-
 export default function CommunityPage() {
   return (
     <>
@@ -34,14 +27,19 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* What You Get */}
+      {/* What We're Building */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">What We&rsquo;re Building</p>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 300 }}
+            className="text-center mb-10">
+            The community, taking shape
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: '💬', title: 'Private Forum', desc: 'A members-only space to ask questions, share wins, and support fellow mamas without judgment.' },
-              { icon: '🎓', title: 'Instructor Hub', desc: 'A dedicated space for certified instructors to share resources, get feedback, and grow their practice.' },
-              { icon: '📅', title: 'Live Events', desc: 'Monthly live Q&As, workshops, and challenges exclusively for community members.' },
+              { icon: '💬', title: 'Members’ Space', desc: 'A place to ask questions, share wins, and support fellow mothers without judgment. In development — early members help shape it.' },
+              { icon: '🎓', title: 'Instructor Hub', desc: 'A dedicated space for certified instructors to share resources and grow their practice. Opening with the founding cohort.' },
+              { icon: '📅', title: 'Live Sessions', desc: 'Q&As, workshops, and challenges with Dr. Bishop. Rolling out as the community grows.' },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl p-8 border border-stone-100 text-center hover:border-[#3ECFCF] transition-colors">
                 <div className="text-4xl mb-4">{item.icon}</div>
@@ -54,37 +52,14 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* Feed Preview */}
+      {/* Founder note */}
       <section className="py-16 bg-[#F9F8F5]">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">Community Highlights</p>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2.5rem', fontWeight: 300 }}
-            className="text-center mb-10">
-            What mamas are saying
-          </h2>
-          <div className="space-y-4">
-            {posts.map((post) => (
-              <div key={post.name} className="bg-white rounded-2xl p-6 border border-stone-100">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-medium"
-                      style={{ background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)' }}>
-                      {post.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-800">{post.name}</p>
-                      <p className="text-xs text-gray-400">{post.time}</p>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-400">❤️ {post.likes}</span>
-                </div>
-                <p className="text-sm text-gray-600 font-light leading-relaxed">{post.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-gray-400 font-light mt-6">
-            Join to see the full community feed
-          </p>
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <blockquote style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 300, fontStyle: 'italic', color: '#1B9E9E', lineHeight: 1.4 }}>
+            &ldquo;Mothers are not a niche. When you build something real for them, a community
+            doesn&rsquo;t have to be manufactured — it gathers.&rdquo;
+          </blockquote>
+          <p className="mt-4 text-xs tracking-widest uppercase text-gray-400">Dr. Niia Bishop</p>
         </div>
       </section>
 

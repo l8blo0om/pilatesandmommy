@@ -18,8 +18,8 @@ const classes = [
     title: 'Postpartum Restore',
     tag: '6+ Weeks Postpartum',
     price: '$35 / class',
-    desc: 'A gentle, evidence-based recovery class to reconnect with your core, heal diastasis recti, and rebuild whole-body strength after birth.',
-    features: ['Diastasis recti focus', 'Pelvic floor rehab', 'Core reintegration', 'In-studio & virtual'],
+    desc: 'A gentle recovery class to reconnect with your deep core, work with diastasis recti, and rebuild whole-body strength after birth. Movement education — provider clearance required.',
+    features: ['Diastasis recti-aware', 'Pelvic floor-informed movement', 'Core reintegration', 'In-studio & virtual'],
     color: '#F0FAFA',
   },
   {

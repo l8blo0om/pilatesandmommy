@@ -98,3 +98,23 @@ a, button {
     hsl(calc(var(--hue) + 20), 38%, 54%)
   );
 }
+
+/* glowing outlined button that breathes */
+.btn-glow{
+  background:#0a0a0a;color:#fff;border:none;padding:15px 28px;cursor:pointer;
+  box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 22px hsl(var(--hue) 90% 58% / .3);
+  animation:breathe 3s ease-in-out infinite;
+}
+.btn-glow:hover{background:hsl(var(--hue) 90% 58%);color:#0a0a0a}
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 18px hsl(var(--hue) 90% 58% / .25)}
+  50%   {box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 32px hsl(var(--hue) 90% 58% / .5)}
+}
+
+/* glowing hairline (like the header border) */
+.glow-line{border-bottom:2px solid transparent;
+  border-image:linear-gradient(90deg,hsl(var(--hue) 90% 60%),hsl(calc(var(--hue) + 60) 90% 60%),hsl(var(--hue) 90% 60%)) 1}
+
+/* accent text (eyebrows, highlights) */
+.accent{color:hsl(var(--hue) 90% 62%)}
+

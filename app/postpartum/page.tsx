@@ -2,29 +2,29 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'The Postpartum Body | Pilates & Mommy',
-  description: 'Understanding postpartum challenges — diastasis recti, pelvic floor, hormones — and how Pilates heals.',
+  description: 'Understanding the postpartum body — diastasis recti, pelvic floor, hormones — and how movement supports recovery. Education, not medical advice.',
 };
 
 const challenges = [
   {
     title: 'Diastasis Recti',
     short: 'The "ab split"',
-    desc: 'During pregnancy, the growing uterus separates the two sides of the rectus abdominis muscle. This is called diastasis recti, and it affects up to 60% of postpartum women. Signs include a "pooch" that doesn\'t improve, lower back pain, and weakness during core movements.',
-    pilates: 'Pilates focuses on deep core activation — specifically the transverse abdominis — which acts like a natural corset, helping draw the separated muscles back together without dangerous pressure.',
+    desc: 'During pregnancy, the growing uterus stretches the connective tissue between the two sides of the rectus abdominis muscle. This is called diastasis recti, and it is very common in late pregnancy and the early postpartum period. Signs can include a "pooch" or doming along the midline, a feeling of core weakness, and lower back discomfort.',
+    pilates: 'Pilates centers on deep core work — especially the transverse abdominis and breath — which research suggests can help restore tension and function across the midline. The goal is coordinated, functional strength, not a guaranteed "closing" of the gap. Persistent or wide separation is worth assessing with a pelvic-health physical therapist.',
     icon: '🫀',
   },
   {
     title: 'Pelvic Floor Dysfunction',
     short: 'More than just leaks',
-    desc: 'The pelvic floor — a hammock of muscles at the base of the pelvis — goes through incredible strain during pregnancy and birth. Dysfunction can show up as leaking when you sneeze, pelvic pain, painful intercourse, or even prolapse.',
-    pilates: 'Pilates integrates pelvic floor awareness into every movement. We teach proper engagement AND release — because an overly tight floor is just as problematic as a weak one.',
+    desc: 'The pelvic floor — a hammock of muscles at the base of the pelvis — goes through significant strain during pregnancy and birth. Dysfunction can show up as leaking, pelvic pain, painful intercourse, or a heaviness that may signal prolapse. It can involve weakness, tightness, or coordination problems — which is why symptoms should be assessed individually.',
+    pilates: 'Our classes integrate pelvic floor awareness into movement — teaching both engagement and release, since an overly tight floor can be as problematic as a weak one. This is movement education, not treatment. Pain, prolapse symptoms, or persistent incontinence should be evaluated by an OB-GYN or a pelvic-health physical therapist.',
     icon: '🌺',
   },
   {
     title: 'Hormonal Shifts',
     short: 'Your body chemistry changed',
-    desc: 'Estrogen and progesterone drop dramatically after birth, especially if breastfeeding. This affects everything: mood, joint laxity, bone density, and energy levels. Many mamas are surprised by how their body "feels different" even months later.',
-    pilates: 'Mindful movement regulates cortisol, stimulates endorphin release, and — when done safely — supports healthy bone density. Pilates is low-impact but highly effective during this hormonal window.',
+    desc: 'Estrogen and progesterone drop sharply after birth, especially while breastfeeding. This can affect mood, joint laxity, and energy. Many mothers are surprised by how different their body feels even months later.',
+    pilates: 'Regular, low-impact movement is broadly associated with better mood and long-term bone and joint health. Pilates is one gentle, accessible way to stay moving through this window — a support, not a cure.',
     icon: '🌙',
   },
   {
@@ -37,15 +37,15 @@ const challenges = [
   {
     title: 'Body Image & Identity',
     short: 'The fourth trimester is real',
-    desc: 'Postpartum bodies look and feel different — and our culture doesn\'t make that easy. Many mamas experience body image struggles, loss of identity, and even postpartum depression or anxiety that manifests physically.',
-    pilates: 'Our studio is a judgment-free space. Movement heals not just bodies but minds. Pilates releases stored tension, improves self-efficacy, and reconnects you with what your body can do — not just how it looks.',
+    desc: 'Postpartum bodies look and feel different — and our culture doesn\'t make that easy. Many mothers experience body-image struggles and shifts in identity. Postpartum depression and anxiety are real and common, and can show up physically.',
+    pilates: 'Our studio is a judgment-free space, and movement can be a meaningful part of feeling reconnected to your body. It is not a treatment for depression or anxiety — if you are struggling, please reach out to your provider or a mental-health professional. You deserve real support.',
     icon: '💙',
   },
   {
     title: 'When to Start',
     short: 'Timing matters',
-    desc: 'The answer isn\'t the same for everyone. A vaginal delivery, C-section, complicated birth, or pelvic floor issues all affect when and how you return to movement. Starting too early can do real harm.',
-    pilates: 'We always recommend a 6-week (minimum) postpartum clearance from your OB or midwife before our Restore classes. Our instructors are trained to modify for your unique situation — always.',
+    desc: 'The answer isn\'t the same for everyone. After an uncomplicated birth, some people feel ready to move gently quite soon; a C-section, a complicated birth, or pelvic-floor symptoms usually mean a longer, more individualized return. There is no single universal timeline.',
+    pilates: 'We ask that you get clearance from your OB-GYN or midwife before joining Restore, and we follow their guidance for your situation. Our instructors are trained to modify — but your care provider, who knows your birth and your body, sets the timeline.',
     icon: '📅',
   },
 ];
@@ -63,7 +63,8 @@ export default function PostpartumPage() {
           </h1>
           <p className="mt-6 text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
             Your body just did one of the most extraordinary things in the universe.
-            Here is what is happening inside it — and exactly how Pilates helps you heal, rebuild, and thrive.
+            Here is what is happening inside it — and how thoughtful movement can support you
+            as you recover and rebuild.
           </p>
         </div>
       </section>
@@ -102,6 +103,30 @@ export default function PostpartumPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Evidence & scope-of-practice note */}
+      <section className="py-14 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="rounded-2xl border border-stone-200 p-8">
+            <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-3">
+              What we know · what we&rsquo;re still learning
+            </p>
+            <p className="text-sm text-gray-600 font-light leading-relaxed mb-4">
+              This page is education, not medical advice. Pilates & Mommy provides movement
+              instruction — not diagnosis, physical therapy, or rehabilitation. The research on
+              exercise in the postpartum period is genuinely encouraging, and also still evolving;
+              we try to describe it honestly rather than overpromise.
+            </p>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
+              If you have pelvic pain, prolapse symptoms, persistent incontinence, a wide or painful
+              abdominal separation, or any concern about your recovery, please see your OB-GYN,
+              midwife, or a pelvic-health physical therapist. For current guidance on returning to
+              activity after pregnancy, the American College of Obstetricians and Gynecologists
+              (ACOG) is a trustworthy starting point.
+            </p>
           </div>
         </div>
       </section>
