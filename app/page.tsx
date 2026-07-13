@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Marquee from '@/components/Marquee';
 
 const classes = [
   { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.png' },
@@ -97,6 +98,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* BRAND TAPE */}
+      <Marquee />
 
       {/* BRAND PILLARS */}
       <section className="py-20 bg-white">

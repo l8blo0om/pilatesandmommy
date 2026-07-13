@@ -118,3 +118,16 @@ a, button {
 /* accent text (eyebrows, highlights) */
 .accent{color:hsl(var(--hue) 90% 62%)}
 
+/* scrolling marquee tape (Soda City energy, warm brand) */
+.marquee{overflow:hidden;white-space:nowrap;display:flex}
+.marquee__track{display:inline-flex;align-items:center;gap:0;padding-block:0;animation:marquee 32s linear infinite;will-change:transform}
+.marquee:hover .marquee__track{animation-play-state:paused}
+.marquee__item{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.35rem;font-weight:500;letter-spacing:.02em;
+  padding:0 1.5rem;display:inline-flex;align-items:center;gap:1.5rem;
+}
+.marquee__dot{width:6px;height:6px;border-radius:50%;background:hsl(var(--hue) 70% 55%);display:inline-block;flex:0 0 auto}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.marquee__track{animation:none}}
+
