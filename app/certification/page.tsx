@@ -275,65 +275,89 @@ export default function CertificationPage() {
         </div>
       </section>
 
-      {/* PRICING */}
+      {/* PRICING — three-rung ladder: learn it → learn it with a coach → get the whole business */}
       <section style={{ background: '#F9F8F5', padding: '5rem 1.5rem' }}>
-        <div style={{ maxWidth: '780px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }}>
           <p style={{ fontSize: '0.65rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1B9E9E', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
-            Investment
+            Three ways in
           </p>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center', marginBottom: '3rem' }}>
-            Choose your path
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center', marginBottom: '0.75rem' }}>
+            Learn it. Teach it. Own it.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <p style={{ textAlign: 'center', color: '#888', fontWeight: 300, fontSize: '0.95rem', maxWidth: '540px', margin: '0 auto 3rem' }}>
+            Start with the method, or skip straight to the whole business — delivered to your door.
+          </p>
+          <div className="pricing-grid">
             {[
               {
                 name: 'Self-Study',
                 price: '$497',
-                note: 'One-time payment · Lifetime access',
+                note: 'One-time · Lifetime access',
                 features: ['All 6 modules', 'Video lessons', 'Downloadable resources', 'Digital certificate', 'Community access'],
                 cta: 'Enroll Now',
-                highlight: false,
+                flagship: false,
               },
               {
                 name: 'Mentored',
                 price: '$897',
-                note: 'One-time payment · Lifetime access',
+                note: 'One-time · Lifetime access',
                 features: ['Everything in Self-Study', '3 live coaching calls', 'Direct instructor feedback', 'Business launch guide', 'Certificate of Excellence'],
                 cta: 'Apply for Mentored',
-                highlight: true,
+                flagship: false,
+                badge: 'Most Popular',
+              },
+              {
+                name: 'The Pouch',
+                price: 'From $2,900',
+                note: 'One-time + $79/mo · your whole business, delivered',
+                features: [
+                  'Full certification included',
+                  'The kit — puppets, bubbles & a giant parachute',
+                  'Branded merch — hoodie, tee & hat',
+                  'Everything ships in branded bags',
+                  'Car magnet + yard sign',
+                  'Print-ready marketing + a starter set we print for you',
+                  'Your classes listed on pilatesandmommy.com',
+                  'AI business assistant + monthly music drops',
+                ],
+                cta: 'Claim Your Pouch',
+                flagship: true,
+                badge: 'Everything, delivered',
               },
             ].map((tier) => (
-              <div key={tier.name} style={{
-                borderRadius: '20px', padding: '2.5rem',
-                border: tier.highlight ? '2px solid #3ECFCF' : '1px solid #e5e5e5',
-                background: tier.highlight ? 'linear-gradient(160deg, #F0FAFA, white)' : 'white',
-                boxShadow: tier.highlight ? '0 8px 32px rgba(62,207,207,0.12)' : 'none',
+              <div key={tier.name} className={tier.flagship ? 'price-card price-card--flagship' : 'price-card'} style={{
+                borderRadius: '20px', padding: '2.5rem', position: 'relative',
+                border: tier.flagship ? '2px solid transparent' : (tier.badge ? '2px solid #3ECFCF' : '1px solid #e5e5e5'),
+                background: tier.flagship ? 'linear-gradient(160deg, #0d4040, #123a3a)' : 'white',
+                color: tier.flagship ? '#eafafa' : 'inherit',
+                boxShadow: tier.flagship ? '0 0 0 1.5px hsl(var(--hue) 80% 55%), 0 12px 40px rgba(13,64,64,0.35)' : 'none',
               }}>
-                {tier.highlight && (
+                {tier.badge && (
                   <span style={{
                     display: 'inline-block', padding: '0.25rem 0.75rem',
                     fontSize: '0.6rem', letterSpacing: '0.1em', textTransform: 'uppercase',
-                    background: '#1B9E9E', color: 'white', borderRadius: '9999px',
-                    fontWeight: 500, marginBottom: '1rem',
+                    background: tier.flagship ? 'hsl(var(--hue) 70% 52%)' : '#1B9E9E',
+                    color: tier.flagship ? '#062020' : 'white', borderRadius: '9999px',
+                    fontWeight: 600, marginBottom: '1rem',
                   }}>
-                    Most Popular
+                    {tier.badge}
                   </span>
                 )}
-                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.8rem', fontWeight: 400, marginBottom: '0.25rem' }}>{tier.name}</h3>
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '3rem', fontWeight: 300, color: '#1B9E9E', lineHeight: 1 }}>{tier.price}</p>
-                <p style={{ fontSize: '0.7rem', color: '#aaa', fontWeight: 300, marginBottom: '1.5rem', marginTop: '0.25rem' }}>{tier.note}</p>
+                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.8rem', fontWeight: 400, marginBottom: '0.25rem', color: tier.flagship ? 'white' : 'inherit' }}>{tier.name}</h3>
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: tier.flagship ? '2.4rem' : '3rem', fontWeight: 300, color: tier.flagship ? 'hsl(var(--hue) 80% 68%)' : '#1B9E9E', lineHeight: 1.1 }}>{tier.price}</p>
+                <p style={{ fontSize: '0.7rem', color: tier.flagship ? 'rgba(234,250,250,0.55)' : '#aaa', fontWeight: 300, marginBottom: '1.5rem', marginTop: '0.25rem' }}>{tier.note}</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                   {tier.features.map((f) => (
-                    <li key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem', color: '#555', fontWeight: 300 }}>
-                      <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#3ECFCF', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', color: 'white' }}>✓</span>
+                    <li key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.85rem', color: tier.flagship ? 'rgba(234,250,250,0.85)' : '#555', fontWeight: 300 }}>
+                      <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: tier.flagship ? 'hsl(var(--hue) 70% 52%)' : '#3ECFCF', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', color: tier.flagship ? '#062020' : 'white' }}>✓</span>
                       {f}
                     </li>
                   ))}
                 </ul>
                 <Link href="/contact" style={{
                   display: 'block', textAlign: 'center', padding: '1rem',
-                  fontSize: '0.8rem', fontWeight: 500, color: 'white', borderRadius: '9999px',
-                  background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)',
+                  fontSize: '0.8rem', fontWeight: 600, color: tier.flagship ? '#062020' : 'white', borderRadius: '9999px',
+                  background: tier.flagship ? 'hsl(var(--hue) 75% 58%)' : 'linear-gradient(135deg, #3ECFCF, #1B9E9E)',
                   textDecoration: 'none', letterSpacing: '0.04em',
                 }}>
                   {tier.cta}
@@ -341,6 +365,9 @@ export default function CertificationPage() {
               </div>
             ))}
           </div>
+          <p style={{ textAlign: 'center', color: '#aaa', fontSize: '0.75rem', fontWeight: 300, marginTop: '2rem' }}>
+            The Pouch includes your certification — no need to buy it separately.
+          </p>
         </div>
       </section>
 
