@@ -79,7 +79,7 @@ export default function HomePage() {
             {/* Hero video */}
             <div className="relative overflow-hidden" style={{ borderRadius: '24px', height: '420px' }}>
               <video
-                src="/videos/0f70b6ba-32df-4738-a1bd-5948040545c6.mp4"
+                src="/videos/mommy-and-me-hero.mp4"
                 autoPlay
                 muted
                 loop
