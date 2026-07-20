@@ -43,5 +43,5 @@ next-env.d.ts
 # Local Netlify folder
 .netlify
 # Local source assets, not part of the deployed site
-IMAGES/
+/IMAGES/
 pilates-and-mommy-certification/

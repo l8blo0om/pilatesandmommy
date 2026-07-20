@@ -28,7 +28,7 @@ export default function CertificationPage() {
 
         {/* Hero image */}
         <Image
-          src="/images/cert-hero.png"
+          src="/images/cert-hero-park.jpg"
           alt="Pilates & Mommy Certification"
           fill
           className="object-cover"
