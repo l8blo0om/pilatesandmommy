@@ -102,8 +102,7 @@ export default function ClassesPage() {
                     ))}
                   </ul>
                   <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
-                    className="block text-center px-6 py-3 text-sm font-medium text-white rounded-full"
-                    style={{ background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)' }}>
+                    className="btn-glow btn-glow--pill block text-center">
                     Book This Class
                   </a>
                 </div>

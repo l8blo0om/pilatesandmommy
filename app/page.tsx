@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Marquee from '@/components/Marquee';
 
 const classes = [
-  { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.png' },
-  { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.png' },
-  { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: '/images/class-mommy-me.png' },
-  { title: 'Power Pilates', desc: 'Full-body mat strength for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.png' },
+  { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.jpg' },
+  { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.jpg' },
+  { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: '/images/class-mommy-me.jpg' },
+  { title: 'Power Pilates', desc: 'Full-body mat strength for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.jpg' },
 ];
 
 // Founder principles — Dr. Niia Bishop's own words (not customer testimonials).
@@ -39,9 +39,7 @@ export default function HomePage() {
               method. Certification teaches it. Community grows around it.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/classes"
-                className="px-8 py-4 text-sm font-medium text-white rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
-                style={{ background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)' }}>
+              <Link href="/classes" className="btn-glow btn-glow--pill">
                 Book a Class
               </Link>
               <Link href="/certification"
@@ -113,7 +111,7 @@ export default function HomePage() {
               { icon: '💬', title: 'Community', sub: 'Moms supporting moms', href: '/community' },
             ].map((p) => (
               <Link key={p.title} href={p.href}
-                className="bg-white p-8 flex flex-col items-center text-center hover:bg-[#F0FAFA] transition-colors group">
+                className="bg-white p-8 flex flex-col items-center text-center hover:bg-[#F0FAFA] transition-colors group card-glow">
                 <span className="text-3xl mb-3">{p.icon}</span>
                 <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 500 }}
                   className="group-hover:text-[#1B9E9E] transition-colors">{p.title}</p>
@@ -140,7 +138,7 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {classes.map((c) => (
-              <div key={c.title} className="bg-white rounded-2xl overflow-hidden border border-stone-100 hover:shadow-md transition-shadow group">
+              <div key={c.title} className="bg-white rounded-2xl overflow-hidden border border-stone-100 card-glow group">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={c.img}
@@ -261,10 +259,10 @@ export default function HomePage() {
       {/* VIDEO REEL */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#1B9E9E] font-medium mb-2 text-center">In Motion</p>
+          <p className="text-xs tracking-[0.2em] uppercase font-medium mb-2 text-center accent">Class Is Outside Today</p>
           <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center' }}
             className="mb-12">
-            See what we do
+            This could be your Tuesday.
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {[
@@ -273,7 +271,7 @@ export default function HomePage() {
               '6d0aaddc-767d-4797-879c-72d197e52b51',
               '948d4fbc-a1e6-442e-b11a-ae054f59b044',
             ].map((id) => (
-              <div key={id} className="relative overflow-hidden rounded-2xl aspect-[9/16] bg-stone-100">
+              <div key={id} className="relative overflow-hidden rounded-2xl aspect-[9/16] bg-stone-100 video-tilt">
                 <video
                   src={`/videos/${id}.mp4`}
                   autoPlay
@@ -305,9 +303,7 @@ export default function HomePage() {
               placeholder="your@email.com"
               className="flex-1 px-4 py-3 text-sm border border-stone-200 rounded-full outline-none focus:border-[#3ECFCF] transition-colors"
             />
-            <button type="submit"
-              className="px-6 py-3 text-sm font-medium text-white rounded-full whitespace-nowrap"
-              style={{ background: 'linear-gradient(135deg, #3ECFCF, #1B9E9E)' }}>
+            <button type="submit" className="btn-glow btn-glow--pill whitespace-nowrap">
               Join
             </button>
           </form>
