@@ -19,21 +19,29 @@ const principles = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO — full-bleed background video */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        {/* Background gradient — left side only */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F0FAFA] to-[#E8F8F5]" />
+        <video
+          src="/videos/mommy-and-me-hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Legibility overlay — deep teal wash, stronger on the left where the text sits */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(100deg, rgba(4,26,26,0.82) 0%, rgba(6,32,32,0.55) 45%, rgba(6,32,32,0.25) 100%)' }} />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-xs tracking-[0.25em] uppercase text-[#1B9E9E] font-medium mb-6">
+        <div className="relative max-w-7xl mx-auto px-6 py-24 w-full">
+          <div className="max-w-2xl">
+            <p className="text-xs tracking-[0.25em] uppercase font-medium mb-6 accent">
               Columbia, SC · Worldwide
             </p>
-            <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 300, lineHeight: 1.1, color: '#1A1A1A' }}>
+            <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 300, lineHeight: 1.1, color: 'white' }}>
               Movement made<br />
-              <em style={{ fontStyle: 'italic', color: '#1B9E9E' }}>for mamas.</em>
+              <em style={{ fontStyle: 'italic', color: '#3ECFCF' }}>for mamas.</em>
             </h1>
-            <p className="mt-6 text-base text-gray-500 font-light leading-relaxed max-w-md">
+            <p className="mt-6 text-base text-white/75 font-light leading-relaxed max-w-md">
               A maternal movement method founded by Dr. Niia Bishop — PhD, dancer, and creator of
               one of the country&rsquo;s first Mommy &amp; Me Pilates formats. Classes practice the
               method. Certification teaches it. Community grows around it.
@@ -43,57 +51,28 @@ export default function HomePage() {
                 Book a Class
               </Link>
               <Link href="/certification"
-                className="px-8 py-4 text-sm font-medium text-[#1B9E9E] border border-[#3ECFCF] rounded-full hover:bg-[#F0FAFA] transition-all">
+                className="px-8 py-4 text-sm font-medium text-white border border-white/50 rounded-full hover:bg-white/10 transition-all">
                 Get Certified
               </Link>
             </div>
             <div className="mt-12 flex gap-10">
               {[['2009', 'Method Founded'], ['PhD', 'Founder-Led'], ['6', 'Certification Modules']].map(([num, label]) => (
                 <div key={label}>
-                  <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', fontWeight: 500, color: '#1B9E9E' }}>{num}</p>
-                  <p className="text-xs text-gray-400 font-light tracking-wide">{label}</p>
+                  <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', fontWeight: 500, color: '#3ECFCF' }}>{num}</p>
+                  <p className="text-xs text-white/60 font-light tracking-wide">{label}</p>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Hero visual — full column */}
-          <div className="hidden lg:flex flex-col gap-5">
-            {/* Logo mark */}
-            <div className="flex justify-center">
-              <div className="relative" style={{ padding: '5px', borderRadius: '22px', background: 'linear-gradient(135deg, #3ECFCF, #5BAD8F)' }}>
-                <div className="relative overflow-hidden bg-white" style={{ borderRadius: '17px', width: '120px', height: '120px' }}>
-                  <Image
-                    src="/logo-icon-white-bg.png"
-                    alt="Pilates & Mommy"
-                    fill
-                    className="object-cover scale-[1.08]"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Hero video */}
-            <div className="relative overflow-hidden" style={{ borderRadius: '24px', height: '420px' }}>
-              <video
-                src="/videos/mommy-and-me-hero.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(27,158,158,0.4) 0%, transparent 60%)' }} />
-              <div className="absolute bottom-6 left-6 right-6">
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}
-                  className="italic">
-                  &ldquo;Your body grew a human.<br />Let us help it thrive.&rdquo;
-                </p>
-                <p className="mt-1 text-xs text-white/60 tracking-widest uppercase">Pilates & Mommy</p>
-              </div>
-            </div>
-          </div>
+        {/* Founder quote — bottom right */}
+        <div className="absolute bottom-8 right-8 hidden md:block text-right">
+          <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.2rem', fontWeight: 300, color: 'white', lineHeight: 1.3 }}
+            className="italic">
+            &ldquo;Your body grew a human.<br />Let us help it thrive.&rdquo;
+          </p>
+          <p className="mt-1 text-xs text-white/60 tracking-widest uppercase">Pilates &amp; Mommy</p>
         </div>
       </section>
 

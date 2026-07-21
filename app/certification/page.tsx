@@ -61,12 +61,7 @@ export default function CertificationPage() {
             Train online with Dr. Niia Bishop. Teach with authority. Build the practice you imagined.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link href="/contact" style={{
-              display: 'inline-block', padding: '1.1rem 2.75rem',
-              fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.06em',
-              color: '#0d4040', background: 'white', borderRadius: '9999px',
-              textDecoration: 'none', transition: 'box-shadow 0.2s',
-            }}>
+            <Link href="/contact" className="btn-glow btn-glow--pill">
               Apply Now
             </Link>
             <a href="#curriculum" style={{
@@ -193,8 +188,8 @@ export default function CertificationPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
             {modules.map((m) => (
-              <div key={m.num} style={{ borderRadius: '16px', padding: '2rem', border: '1px solid #eee', transition: 'border-color 0.2s' }}>
-                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '3.5rem', fontWeight: 300, color: '#f0f0f0', lineHeight: 1, marginBottom: '0.5rem' }}>
+              <div key={m.num} className="card-glow" style={{ borderRadius: '16px', padding: '2rem', border: '1px solid #eee', background: '#F9F8F5' }}>
+                <p className="accent" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '3.5rem', fontWeight: 400, lineHeight: 1, marginBottom: '0.5rem', opacity: 0.85 }}>
                   {m.num}
                 </p>
                 <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.2rem', fontWeight: 500, marginBottom: '0.75rem', lineHeight: 1.25 }}>
@@ -354,12 +349,14 @@ export default function CertificationPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" style={{
-                  display: 'block', textAlign: 'center', padding: '1rem',
-                  fontSize: '0.8rem', fontWeight: 600, color: tier.flagship ? '#062020' : 'white', borderRadius: '9999px',
-                  background: tier.flagship ? 'hsl(var(--hue) 75% 58%)' : 'linear-gradient(135deg, #3ECFCF, #1B9E9E)',
-                  textDecoration: 'none', letterSpacing: '0.04em',
-                }}>
+                <Link href="/contact"
+                  className={tier.flagship ? undefined : 'btn-glow btn-glow--pill'}
+                  style={tier.flagship ? {
+                    display: 'block', textAlign: 'center', padding: '1rem',
+                    fontSize: '0.8rem', fontWeight: 600, color: '#062020', borderRadius: '9999px',
+                    background: 'hsl(var(--hue) 75% 58%)',
+                    textDecoration: 'none', letterSpacing: '0.04em',
+                  } : { display: 'block', textAlign: 'center' }}>
                   {tier.cta}
                 </Link>
               </div>
@@ -386,12 +383,7 @@ export default function CertificationPage() {
             Train with Dr. Niia Bishop — two decades of Pilates, dance education, and a PhD.<br />
             Teach with the authority that comes from real knowledge.
           </p>
-          <Link href="/contact" style={{
-            display: 'inline-block', padding: '1.1rem 3.5rem',
-            fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.06em',
-            color: '#062020', background: 'white', borderRadius: '9999px',
-            textDecoration: 'none',
-          }}>
+          <Link href="/contact" className="btn-glow btn-glow--pill">
             Apply Now
           </Link>
           <p style={{ marginTop: '1.25rem', fontSize: '0.65rem', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
