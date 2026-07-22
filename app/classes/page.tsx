@@ -111,6 +111,32 @@ export default function ClassesPage() {
         </div>
       </section>
 
+      {/* Founding Mamas — grand opening offer */}
+      <section className="py-16" style={{ background: 'linear-gradient(150deg, #0c4444, #0e5252)' }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <span className="inline-block px-4 py-1.5 mb-4 text-xs rounded-full font-bold uppercase tracking-[0.18em]"
+            style={{ background: 'hsl(var(--hue) 70% 55%)', color: '#062020' }}>
+            Grand Opening · September Only
+          </span>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.2rem, 5vw, 3.4rem)', fontWeight: 300, color: 'white', lineHeight: 1.1 }}>
+            Be a <em style={{ color: '#3ECFCF', fontStyle: 'italic' }}>Founding Mama.</em>
+          </h2>
+          <p className="mt-5 text-white/80 font-light leading-relaxed max-w-xl mx-auto">
+            Your first class is <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$20</b> all September long.
+            And the first <b style={{ color: '#3ECFCF', fontWeight: 600 }}>12 mamas in each city</b> lock the
+            $129 Monthly Unlimited rate <b style={{ color: '#3ECFCF', fontWeight: 600 }}>for life</b> — whatever
+            it costs later, founders never pay more.
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-widest text-white/40">
+            Columbia · Irmo · Fort Mill · Charlotte · Rock Hill
+          </p>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
+            className="btn-glow btn-glow--pill inline-block mt-8">
+            Claim Your Founding Spot
+          </a>
+        </div>
+      </section>
+
       {/* Passes & Packs */}
       <section className="py-16 bg-white border-t border-stone-100">
         <div className="max-w-5xl mx-auto px-6">
