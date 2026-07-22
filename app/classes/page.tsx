@@ -138,6 +138,44 @@ export default function ClassesPage() {
         </div>
       </section>
 
+      {/* Passes & Packs */}
+      <section className="py-16 bg-white border-t border-stone-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-xs tracking-[0.2em] uppercase font-medium mb-2 text-center accent">Come More, Pay Less</p>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 300, textAlign: 'center' }}
+            className="mb-10">
+            Passes &amp; packs
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { name: 'Drop-In', price: '$35–40', note: 'per class', desc: 'Try any class, any city, any time. No commitment — just come move.', highlight: false },
+              { name: '4-Class Pack', price: '$120', note: '$30/class · save up to $40', desc: 'Four classes, any mix, any location. Valid 8 weeks. The regular-mama move.', highlight: true },
+              { name: 'Monthly Unlimited', price: '$129', note: 'per month', desc: 'Every group class, every city, all month — plus first dibs on new time slots.', highlight: false },
+            ].map((p) => (
+              <div key={p.name} className="rounded-2xl p-8 text-center card-glow"
+                style={{ background: p.highlight ? 'linear-gradient(160deg, #0d4040, #123a3a)' : '#F9F8F5', color: p.highlight ? '#eafafa' : 'inherit', border: p.highlight ? 'none' : '1px solid #eee' }}>
+                {p.highlight && (
+                  <span className="inline-block px-3 py-1 mb-3 text-xs rounded-full font-semibold uppercase tracking-wider"
+                    style={{ background: 'hsl(var(--hue) 70% 52%)', color: '#062020', fontSize: '0.6rem' }}>
+                    Most Popular
+                  </span>
+                )}
+                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 500, color: p.highlight ? 'white' : 'inherit' }}>{p.name}</h3>
+                <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2.6rem', fontWeight: 300, color: p.highlight ? 'hsl(var(--hue) 80% 68%)' : '#1B9E9E', lineHeight: 1.1 }}>{p.price}</p>
+                <p className="text-xs mb-4" style={{ color: p.highlight ? 'rgba(234,250,250,0.6)' : '#aaa' }}>{p.note}</p>
+                <p className="text-sm font-light leading-relaxed mb-6" style={{ color: p.highlight ? 'rgba(234,250,250,0.85)' : '#555' }}>{p.desc}</p>
+                <a href="/contact" className="btn-glow btn-glow--pill block text-center">
+                  {p.name === 'Drop-In' ? 'Book a Class' : `Get the ${p.name}`}
+                </a>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-xs text-gray-400 font-light">
+            Packs work across all group classes and all locations. Book your spot as usual — we&rsquo;ll check you in.
+          </p>
+        </div>
+      </section>
+
       {/* Booking Info */}
       <section className="py-16 bg-[#F9F8F5]">
         <div className="max-w-7xl mx-auto px-6">
