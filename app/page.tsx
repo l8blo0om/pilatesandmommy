@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Marquee from '@/components/Marquee';
 
 const classes = [
+  { title: 'Mommy & Me', desc: 'The class that started it all — bond with your baby while rebuilding your strength. Bubbles included.', tag: '★ The Signature', img: '/images/class-mommy-me.jpg' },
   { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.jpg' },
   { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.jpg' },
-  { title: 'Mommy & Me', desc: 'Bond with your baby while rebuilding your strength.', tag: 'In-Studio', img: '/images/class-mommy-me.jpg' },
   { title: 'Power Pilates', desc: 'Full-body mat strength for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.jpg' },
 ];
 
@@ -35,7 +35,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-6 py-24 w-full">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.25em] uppercase font-medium mb-6 accent">
-              Columbia, SC · Worldwide
+              Columbia · Fort Mill · Charlotte · Virtual
             </p>
             <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5.5rem)', fontWeight: 300, lineHeight: 1.1, color: 'white' }}>
               Movement made<br />

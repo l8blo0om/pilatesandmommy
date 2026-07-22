@@ -33,6 +33,7 @@ export default function SplashScreen() {
       style={{
         opacity: leaving ? 0 : 1,
         transition: 'opacity 1s ease',
+        pointerEvents: leaving ? 'none' : 'auto',
       }}
     >
       {/* Full-screen video */}

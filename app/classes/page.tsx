@@ -2,10 +2,19 @@ import { CALENDLY_URL, CALENDLY_EVENTS } from '@/lib/booking';
 
 export const metadata = {
   title: 'Classes & Booking | Pilates & Mommy',
-  description: 'Book prenatal, postpartum, and mommy pilates classes in Columbia, SC or online.',
+  description: 'Book prenatal, postpartum, and Mommy & Me Pilates classes in Columbia, Fort Mill, Charlotte, or online.',
 };
 
 const classes = [
+  {
+    title: 'Mommy & Me',
+    tag: '★ The Signature · Bring Baby!',
+    price: '$40 / class',
+    desc: 'A joyful class that welcomes babies 3–12 months. Move your body, bond with your baby, and connect with other mamas.',
+    features: ['Baby welcome', 'Community connection', 'Postpartum rebuilding', 'In-studio only'],
+    color: '#E8F8F5',
+    video: '/videos/class-mommy-me.mp4',
+  },
   {
     title: 'Prenatal Pilates',
     tag: 'All Trimesters',
@@ -23,15 +32,6 @@ const classes = [
     features: ['Diastasis recti-aware', 'Pelvic floor-informed movement', 'Core reintegration', 'In-studio & virtual'],
     color: '#F0FAFA',
     video: '/videos/class-postpartum.mp4',
-  },
-  {
-    title: 'Mommy & Me',
-    tag: 'Bring Baby!',
-    price: '$40 / class',
-    desc: 'A joyful class that welcomes babies 3–12 months. Move your body, bond with your baby, and connect with other mamas.',
-    features: ['Baby welcome', 'Community connection', 'Postpartum rebuilding', 'In-studio only'],
-    color: '#E8F8F5',
-    video: '/videos/class-mommy-me.mp4',
   },
   {
     title: 'Power Pilates',
@@ -77,7 +77,7 @@ export default function ClassesPage() {
         />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(4,26,26,0.7), rgba(6,32,32,0.55))' }} />
         <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs tracking-[0.25em] uppercase font-medium mb-4 accent">Columbia, SC & Virtual</p>
+          <p className="text-xs tracking-[0.25em] uppercase font-medium mb-4 accent">Columbia · Fort Mill · Charlotte & Virtual</p>
           <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 300, lineHeight: 1.1, color: 'white' }}>
             Classes for every<br /><em style={{ color: '#3ECFCF' }}>stage of motherhood</em>
           </h1>
@@ -143,7 +143,7 @@ export default function ClassesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { icon: '📍', title: 'Studio Location', desc: 'Columbia, SC\nAddress provided on booking confirmation.' },
+              { icon: '📍', title: 'Locations', desc: 'Columbia · Fort Mill · Charlotte\nExact address provided on booking confirmation.' },
               { icon: '💻', title: 'Virtual Classes', desc: 'Join from anywhere via Zoom link sent upon booking.' },
               { icon: '📱', title: 'Easy Booking', desc: 'Book online, via email, or call/text to reserve your spot.' },
             ].map((item) => (
