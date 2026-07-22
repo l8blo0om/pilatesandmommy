@@ -122,13 +122,15 @@ export default function ClassesPage() {
             Be a <em style={{ color: '#3ECFCF', fontStyle: 'italic' }}>Founding Mama.</em>
           </h2>
           <p className="mt-5 text-white/80 font-light leading-relaxed max-w-xl mx-auto">
-            Your first class is <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$20</b> all September long.
-            And the first <b style={{ color: '#3ECFCF', fontWeight: 600 }}>12 mamas in each city</b> lock the
-            $129 Monthly Unlimited rate <b style={{ color: '#3ECFCF', fontWeight: 600 }}>for life</b> — whatever
-            it costs later, founders never pay more.
+            Take your first class for <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$20</b> this September,
+            then lock in Unlimited Pilates &amp; Mommy classes at <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$129 a month for life</b>.
+            Only <b style={{ color: '#3ECFCF', fontWeight: 600 }}>12 founding memberships</b> are available in each city.
           </p>
           <p className="mt-3 text-xs uppercase tracking-widest text-white/40">
             Columbia · Irmo · Fort Mill · Charlotte · Rock Hill
+          </p>
+          <p className="mt-2 text-[0.65rem] text-white/30">
+            Lifetime rate stays yours as long as your membership remains active.
           </p>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
             className="btn-glow btn-glow--pill inline-block mt-8">
