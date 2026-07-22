@@ -25,15 +25,6 @@ const classes = [
     video: '/videos/class-postpartum.mp4',
   },
   {
-    title: 'Private Sessions',
-    tag: 'Personalized',
-    price: 'From $95',
-    desc: 'One-on-one sessions tailored entirely to your body, goals, and stage of motherhood. The ultimate personalized experience.',
-    features: ['Custom programming', '1-on-1 with instructor', 'Any stage welcome', 'In-studio & virtual'],
-    color: '#E8F8F5',
-    video: '/videos/class-private.mp4',
-  },
-  {
     title: 'Corporate & Group',
     tag: 'For Teams',
     price: 'Contact for pricing',
