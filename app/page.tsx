@@ -22,7 +22,7 @@ export default function HomePage() {
       {/* HERO — full-bleed background video */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <video
-          src="/videos/mommy-and-me-hero.mp4"
+          src="/videos/parachute-hero.mp4"
           autoPlay
           muted
           loop

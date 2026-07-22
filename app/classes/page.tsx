@@ -13,6 +13,7 @@ const classes = [
     desc: 'A safe, nurturing class designed specifically for each trimester. Focuses on breath, core support, pelvic stability, and preparing the body for birth.',
     features: ['Core & pelvic support', 'Breath & relaxation', 'Labor prep movements', 'In-studio & virtual'],
     color: '#E8F8F5',
+    video: '/videos/class-prenatal.mp4',
   },
   {
     title: 'Postpartum Restore',
@@ -21,6 +22,7 @@ const classes = [
     desc: 'A gentle recovery class to reconnect with your deep core, work with diastasis recti, and rebuild whole-body strength after birth. Movement education — provider clearance required.',
     features: ['Diastasis recti-aware', 'Pelvic floor-informed movement', 'Core reintegration', 'In-studio & virtual'],
     color: '#F0FAFA',
+    video: '/videos/class-postpartum.mp4',
   },
   {
     title: 'Mommy & Me',
@@ -29,6 +31,7 @@ const classes = [
     desc: 'A joyful class that welcomes babies 3–12 months. Move your body, bond with your baby, and connect with other mamas.',
     features: ['Baby welcome', 'Community connection', 'Postpartum rebuilding', 'In-studio only'],
     color: '#E8F8F5',
+    video: '/videos/class-mommy-me.mp4',
   },
   {
     title: 'Power Pilates',
@@ -37,6 +40,7 @@ const classes = [
     desc: 'Intermediate mat work for mamas ready to build serious strength, flexibility, and tone — no machines, just your body.',
     features: ['Progressive mat work', 'Full-body strength', 'Flexibility & balance', 'In-studio & virtual'],
     color: '#F0FAFA',
+    video: '/videos/class-power.mp4',
   },
   {
     title: 'Private Sessions',
@@ -45,6 +49,7 @@ const classes = [
     desc: 'One-on-one sessions tailored entirely to your body, goals, and stage of motherhood. The ultimate personalized experience.',
     features: ['Custom programming', '1-on-1 with instructor', 'Any stage welcome', 'In-studio & virtual'],
     color: '#E8F8F5',
+    video: '/videos/class-private.mp4',
   },
   {
     title: 'Corporate & Group',
@@ -53,20 +58,30 @@ const classes = [
     desc: 'Bring Pilates & Mommy to your workplace or community group. Perfect for prenatal/postnatal employee wellness programs.',
     features: ['Group rates available', 'On-site or virtual', 'Customizable format', 'Contact us to book'],
     color: '#F0FAFA',
+    video: '/videos/class-virtual.mp4',
   },
 ];
 
 export default function ClassesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-24 bg-gradient-to-b from-[#F0FAFA] to-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs tracking-[0.25em] uppercase text-[#1B9E9E] font-medium mb-4">Columbia, SC & Virtual</p>
-          <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 300, lineHeight: 1.1 }}>
-            Classes for every<br /><em style={{ color: '#1B9E9E' }}>stage of motherhood</em>
+      {/* Hero — full-bleed class video */}
+      <section className="relative py-32 overflow-hidden">
+        <video
+          src="/videos/classes-hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(4,26,26,0.7), rgba(6,32,32,0.55))' }} />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <p className="text-xs tracking-[0.25em] uppercase font-medium mb-4 accent">Columbia, SC & Virtual</p>
+          <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 300, lineHeight: 1.1, color: 'white' }}>
+            Classes for every<br /><em style={{ color: '#3ECFCF' }}>stage of motherhood</em>
           </h1>
-          <p className="mt-6 text-gray-500 font-light max-w-lg mx-auto">
+          <p className="mt-6 text-white/75 font-light max-w-lg mx-auto">
             Whether you are newly pregnant, freshly postpartum, or years into motherhood — there is a class here for you.
           </p>
         </div>
@@ -77,7 +92,18 @@ export default function ClassesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {classes.map((c) => (
-              <div key={c.title} className="rounded-2xl overflow-hidden border border-stone-100 hover:shadow-lg transition-shadow">
+              <div key={c.title} className="rounded-2xl overflow-hidden border border-stone-100 card-glow">
+                <div className="relative aspect-video overflow-hidden">
+                  <video
+                    src={c.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(6,32,32,0.25), transparent 50%)' }} />
+                </div>
                 <div className="p-8" style={{ background: c.color }}>
                   <div className="flex items-start justify-between mb-4">
                     <span className="px-3 py-1 text-xs rounded-full text-[#1B9E9E] bg-white font-medium">

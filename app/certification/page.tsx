@@ -338,6 +338,18 @@ export default function CertificationPage() {
                     {tier.badge}
                   </span>
                 )}
+                {tier.flagship && (
+                  <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', aspectRatio: '16/9', marginBottom: '1.25rem' }}>
+                    <video
+                      src="/videos/pouch-unboxing.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+                )}
                 <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.8rem', fontWeight: 400, marginBottom: '0.25rem', color: tier.flagship ? 'white' : 'inherit' }}>{tier.name}</h3>
                 <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: tier.flagship ? '2.4rem' : '3rem', fontWeight: 300, color: tier.flagship ? 'hsl(var(--hue) 80% 68%)' : '#1B9E9E', lineHeight: 1.1 }}>{tier.price}</p>
                 <p style={{ fontSize: '0.7rem', color: tier.flagship ? 'rgba(234,250,250,0.55)' : '#aaa', fontWeight: 300, marginBottom: '1.5rem', marginTop: '0.25rem' }}>{tier.note}</p>
