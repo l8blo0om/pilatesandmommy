@@ -114,15 +114,16 @@ export default function ClassesPage() {
       {/* Passes & Packs */}
       <section className="py-16 bg-white border-t border-stone-100">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-xs tracking-[0.2em] uppercase font-medium mb-2 text-center accent">Come More, Pay Less</p>
+          <p className="text-xs tracking-[0.2em] uppercase font-medium mb-2 text-center accent">Reserve Your Mat</p>
           <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 300, textAlign: 'center' }}
             className="mb-10">
-            Passes &amp; packs
+            Sessions &amp; passes
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Drop-In', price: '$35–40', note: 'per class', desc: 'Try any class, any city, any time. No commitment — just come move.', highlight: false },
-              { name: '4-Class Pack', price: '$120', note: '$30/class · save up to $40', desc: 'Four classes, any mix, any location. Valid 8 weeks. The regular-mama move.', highlight: true },
+              { name: '4-Week Session', price: '$120', note: '~$30/class · reserved spot', desc: 'Your mat, your class, same time every week for four weeks. Your baby&apos;s crew becomes your crew.', highlight: false },
+              { name: '8-Week Session', price: '$220', note: '~$27.50/class · best rate', desc: 'The full arc — eight weeks of reserved spots with the same circle of mamas. How the magic happens.', highlight: true },
               { name: 'Monthly Unlimited', price: '$129', note: 'per month', desc: 'Every group class, every city, all month — plus first dibs on new time slots.', highlight: false },
             ].map((p) => (
               <div key={p.name} className="rounded-2xl p-8 text-center card-glow"
@@ -144,7 +145,7 @@ export default function ClassesPage() {
             ))}
           </div>
           <p className="mt-8 text-center text-xs text-gray-400 font-light">
-            Packs work across all group classes and all locations. Book your spot as usual — we&rsquo;ll check you in.
+            Sessions reserve your spot in one class &amp; city — Unlimited roams them all. Book as usual; we&rsquo;ll check you in.
           </p>
         </div>
       </section>
