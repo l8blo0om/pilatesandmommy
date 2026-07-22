@@ -2,7 +2,7 @@ import { CALENDLY_URL, CALENDLY_EVENTS } from '@/lib/booking';
 
 export const metadata = {
   title: 'Classes & Booking | Pilates & Mommy',
-  description: 'Book prenatal, postpartum, and Mommy & Me Pilates classes in Columbia, Fort Mill, Charlotte, or online.',
+  description: 'Book Mommy & Me Pilates — the signature mat class — in Columbia, Fort Mill, Charlotte, or online.',
 };
 
 const classes = [
@@ -16,15 +16,6 @@ const classes = [
     video: '/videos/class-mommy-me.mp4',
   },
   {
-    title: 'Prenatal Pilates',
-    tag: 'All Trimesters',
-    price: '$35 / class',
-    desc: 'A safe, nurturing class designed specifically for each trimester. Focuses on breath, core support, pelvic stability, and preparing the body for birth.',
-    features: ['Core & pelvic support', 'Breath & relaxation', 'Labor prep movements', 'In-studio & virtual'],
-    color: '#E8F8F5',
-    video: '/videos/class-prenatal.mp4',
-  },
-  {
     title: 'Postpartum Restore',
     tag: '6+ Weeks Postpartum',
     price: '$35 / class',
@@ -32,15 +23,6 @@ const classes = [
     features: ['Diastasis recti-aware', 'Pelvic floor-informed movement', 'Core reintegration', 'In-studio & virtual'],
     color: '#F0FAFA',
     video: '/videos/class-postpartum.mp4',
-  },
-  {
-    title: 'Power Pilates',
-    tag: 'All Levels',
-    price: '$40 / class',
-    desc: 'Intermediate mat work for mamas ready to build serious strength, flexibility, and tone — no machines, just your body.',
-    features: ['Progressive mat work', 'Full-body strength', 'Flexibility & balance', 'In-studio & virtual'],
-    color: '#F0FAFA',
-    video: '/videos/class-power.mp4',
   },
   {
     title: 'Private Sessions',
@@ -82,7 +64,7 @@ export default function ClassesPage() {
             Classes for every<br /><em style={{ color: '#3ECFCF' }}>stage of motherhood</em>
           </h1>
           <p className="mt-6 text-white/75 font-light max-w-lg mx-auto">
-            Whether you are newly pregnant, freshly postpartum, or years into motherhood — there is a class here for you.
+            Freshly postpartum or years into motherhood — there is a mat here for you, and your baby is invited.
           </p>
         </div>
       </section>

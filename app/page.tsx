@@ -4,9 +4,7 @@ import Marquee from '@/components/Marquee';
 
 const classes = [
   { title: 'Mommy & Me', desc: 'The class that started it all — bond with your baby while rebuilding your strength. Bubbles included.', tag: '★ The Signature', img: '/images/class-mommy-me.jpg' },
-  { title: 'Prenatal Pilates', desc: 'Safe, nurturing movement designed for every trimester.', tag: 'In-Studio & Virtual', img: '/images/class-prenatal.jpg' },
   { title: 'Postpartum Restore', desc: 'Gentle rebuilding from the inside out — core, floor, and beyond.', tag: 'In-Studio & Virtual', img: '/images/class-postpartum.jpg' },
-  { title: 'Power Pilates', desc: 'Full-body mat strength for the mama ready to level up.', tag: 'In-Studio', img: '/images/class-power.jpg' },
 ];
 
 // Founder principles — Dr. Niia Bishop's own words (not customer testimonials).
@@ -115,7 +113,7 @@ export default function HomePage() {
               View all classes →
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {classes.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl overflow-hidden border border-stone-100 card-glow group">
                 <div className="relative h-48 overflow-hidden">
