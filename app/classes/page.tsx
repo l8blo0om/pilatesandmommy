@@ -1,4 +1,4 @@
-import { CALENDLY_URL } from '@/lib/booking';
+import { CALENDLY_URL, CALENDLY_EVENTS } from '@/lib/booking';
 
 export const metadata = {
   title: 'Classes & Booking | Pilates & Mommy',
@@ -127,7 +127,7 @@ export default function ClassesPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
+                  <a href={CALENDLY_EVENTS[c.title] ?? CALENDLY_URL} target="_blank" rel="noopener noreferrer"
                     className="btn-glow btn-glow--pill block text-center">
                     Book This Class
                   </a>
