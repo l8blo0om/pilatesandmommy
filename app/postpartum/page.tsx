@@ -147,6 +147,33 @@ export default function PostpartumPage() {
               </div>
             </div>
           </div>
+
+          {/* Shareable infographic */}
+          <div className="mt-12 grid md:grid-cols-2 gap-8 items-center">
+            <div className="card-glow rounded-2xl overflow-hidden border border-stone-100 bg-white">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/edu-infographic.jpg"
+                alt="Rebuilding the Postpartum Body — diastasis recti & core recovery, pelvic floor-informed movement, and rebuilding from the inside out"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.8rem', fontWeight: 400, lineHeight: 1.2 }}>
+                The one-page version
+              </h3>
+              <p className="mt-3 text-gray-500 font-light leading-relaxed">
+                The three ideas this whole page rests on — abdominal separation, the pelvic floor,
+                and rebuilding from the inside out — on a single graphic. Save it, print it,
+                send it to a mama who needs it.
+              </p>
+              <a href="/images/edu-infographic.jpg" download="rebuilding-the-postpartum-body.jpg"
+                className="btn-glow btn-glow--pill inline-block mt-6">
+                Download &amp; Share
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
