@@ -107,6 +107,49 @@ export default function PostpartumPage() {
         </div>
       </section>
 
+      {/* Watch & learn */}
+      <section className="py-20 bg-[#F9F8F5]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-xs tracking-[0.2em] uppercase font-medium mb-2 text-center accent">Watch &amp; Learn</p>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, textAlign: 'center' }}
+            className="mb-10">
+            The science, explained gently
+          </h2>
+          <div className="grid md:grid-cols-5 gap-6 items-start">
+            <div className="md:col-span-3 card-glow rounded-2xl overflow-hidden bg-black">
+              <video
+                src="/videos/edu-rebuilding-foundation.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full aspect-video"
+              />
+              <div className="bg-white p-5">
+                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 500 }}>
+                  Rebuilding the Foundation
+                </h3>
+                <p className="text-sm text-gray-500 font-light">A 4-minute look at what actually happens to the postpartum body — and how thoughtful movement supports recovery.</p>
+              </div>
+            </div>
+            <div className="md:col-span-2 card-glow rounded-2xl overflow-hidden bg-black">
+              <video
+                src="/videos/edu-core-60s.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full aspect-[9/16]"
+              />
+              <div className="bg-white p-5">
+                <h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.3rem', fontWeight: 500 }}>
+                  How Mommy &amp; Me Rebuilds the Core
+                </h3>
+                <p className="text-sm text-gray-500 font-light">The 60-second version — why the signature class works from the inside out.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Evidence & scope-of-practice note */}
       <section className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-6">
