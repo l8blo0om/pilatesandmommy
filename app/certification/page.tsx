@@ -87,7 +87,12 @@ export default function CertificationPage() {
             display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
             padding: '1.5rem',
           }}>
-            <Image src="/images/niia-portrait.png" alt="Dr. Niia Bishop" fill className="object-cover" />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, #0d4040, #123a3a)' }} />
+            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontWeight: 300, fontSize: 'clamp(5rem, 12vw, 9rem)', color: 'hsl(var(--hue) 70% 62% / 0.32)', lineHeight: 1 }}>
+                NB
+              </span>
+            </div>
             <div style={{ position: 'relative', width: '100%', padding: '1rem', background: 'rgba(0,0,0,0.35)', borderRadius: '12px', backdropFilter: 'blur(8px)' }}>
               <p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.1rem', fontWeight: 400, color: 'white', marginBottom: '0.2rem' }}>
                 Dr. Niia Bishop

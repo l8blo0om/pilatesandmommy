@@ -67,7 +67,7 @@ const structuredData = {
       url: 'https://www.pilatesandmommy.com/about',
       jobTitle: 'Founder & Comprehensive Pilates Instructor',
       description:
-        'PhD, Alvin Ailey scholar, NDI certified dance educator, creator of Mamilates, and founder of Pilates & Mommy.',
+        'PhD, Alvin Ailey scholar, NDI certified dance educator, creator of Mamilates — one of the country’s first Mommy & Me Pilates formats — and founder of Pilates & Mommy.',
       alumniOf: [
         { '@type': 'CollegeOrUniversity', name: 'Amherst College' },
         { '@type': 'CollegeOrUniversity', name: 'University of Michigan' },

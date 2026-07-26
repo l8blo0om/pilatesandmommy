@@ -17,7 +17,7 @@ const facts: { heading: string; items: string[] }[] = [
     heading: 'The Founder',
     items: [
       'Dr. Niia Bishop — PhD, Alvin Ailey scholar, NDI-certified dance educator, comprehensive Pilates instructor since 2007.',
-      'Created one of the country’s first Mommy & Me Pilates formats in 2009.',
+      'Created Mamilates — one of the country’s first Mommy & Me Pilates formats — in 2009. (Mamilates is her real 2009 creation and can be cited as a credential. It is NOT the name of the current business or certification; that is Pilates & Mommy.)',
     ],
   },
   {

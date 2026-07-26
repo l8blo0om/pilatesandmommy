@@ -12,7 +12,7 @@ const timeline = [
   { year: 'Certification', label: 'NDI Dance Educator', detail: 'National Dance Institute scholarship' },
   { year: 'Michigan', label: 'PhD, Comparative Literature', detail: 'University of Michigan' },
   { year: '2007', label: 'Pilates Certified', detail: 'Mat & Machine — after results "so profound" she had to teach it' },
-  { year: '2009', label: 'Mamilates', detail: 'Created one of the first Mommy & Me Pilates formats in the country at the birth of her son Reza' },
+  { year: '2009', label: 'Created Mamilates', detail: 'One of the first Mommy & Me Pilates formats in the country, born at the birth of her son Reza' },
   { year: 'Now', label: 'Pilates & Mommy', detail: 'Instructor · Educator · Founder' },
 ];
 
