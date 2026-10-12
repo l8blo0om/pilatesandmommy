@@ -41,7 +41,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-base text-white/75 font-light leading-relaxed max-w-md">
               A maternal movement method founded by Dr. Niia Bishop — PhD, dancer, and creator of
-              one of the country&rsquo;s first Mommy &amp; Me Pilates formats. Classes practice the
+              Mamilates, her original Mommy &amp; Me Pilates format. Classes practice the
               method. Certification teaches it. Community grows around it.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">

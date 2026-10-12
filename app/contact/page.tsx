@@ -77,10 +77,8 @@ export default function ContactPage() {
                 Find us
               </h2>
               {[
-                { icon: '📍', label: 'Studio Location', value: 'Columbia, SC\n(Address provided on booking confirmation)' },
+                { icon: '📍', label: 'Launching In', value: 'Columbia · Fort Mill · Charlotte\n(Host locations being finalized — join the list for first access)' },
                 { icon: '📧', label: 'Email', value: 'hello@pilatesandmommy.com' },
-                { icon: '📱', label: 'Phone / Text', value: '(803) 000-0000' },
-                { icon: '🕐', label: 'Studio Hours', value: 'Mon–Sat: 7am – 7pm\nSunday: 9am – 2pm' },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4 py-4 border-b border-stone-100">
                   <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>

@@ -116,13 +116,13 @@ export default function ClassesPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <span className="inline-block px-4 py-1.5 mb-4 text-xs rounded-full font-bold uppercase tracking-[0.18em]"
             style={{ background: 'hsl(var(--hue) 70% 55%)', color: '#062020' }}>
-            Grand Opening · September Only
+            Founding Mama Launch
           </span>
           <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.2rem, 5vw, 3.4rem)', fontWeight: 300, color: 'white', lineHeight: 1.1 }}>
             Be a <em style={{ color: '#3ECFCF', fontStyle: 'italic' }}>Founding Mama.</em>
           </h2>
           <p className="mt-5 text-white/80 font-light leading-relaxed max-w-xl mx-auto">
-            Take your first class for <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$20</b> this September,
+            Take your first class for <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$20</b>,
             then lock in Unlimited Pilates &amp; Mommy classes at <b style={{ color: '#3ECFCF', fontWeight: 600 }}>$129 a month for life</b>.
             Only <b style={{ color: '#3ECFCF', fontWeight: 600 }}>12 founding memberships</b> are available in each city.
           </p>

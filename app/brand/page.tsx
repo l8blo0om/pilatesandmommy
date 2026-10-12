@@ -17,7 +17,8 @@ const facts: { heading: string; items: string[] }[] = [
     heading: 'The Founder',
     items: [
       'Dr. Niia Bishop — PhD, Alvin Ailey scholar, NDI-certified dance educator, comprehensive Pilates instructor since 2007.',
-      'Created Mamilates — one of the country’s first Mommy & Me Pilates formats — in 2009. (Mamilates is her real 2009 creation and can be cited as a credential. It is NOT the name of the current business or certification; that is Pilates & Mommy.)',
+      'Created Mamilates — her original Mommy & Me Pilates format — in 2009 after the birth of her son. (Mamilates is a real credential and can be cited. Do NOT call it "one of the first in the country" — unprovable. It is NOT the name of the current business or certification; that is Pilates & Mommy.)',
+      'Credentials: Mat Pilates certified 2007 · Comprehensive machine certified 2022. Do not merge these into one 2007 credential.',
     ],
   },
   {
@@ -39,7 +40,7 @@ const facts: { heading: string; items: string[] }[] = [
   {
     heading: 'Grand Opening — Founding Mamas',
     items: [
-      '“Become a Founding Mama. Take your first class for $20 this September, then lock in Unlimited Pilates & Mommy classes for $129 a month for life. Only 12 founding memberships are available in each city.”',
+      '“Become a Founding Mama. Take your first class for $20, then lock in Unlimited Pilates & Mommy classes for $129 a month for life. Only 12 founding memberships are available in each city.”',
       'Lifetime rate requires membership to remain active.',
       'Always say “$20” — never “half off.”',
     ],
@@ -49,7 +50,7 @@ const facts: { heading: string; items: string[] }[] = [
     items: [
       'Columbia · Irmo · Fort Mill · Charlotte · Rock Hill — plus virtual.',
       'Exact venues TBD — do not name specific studios or addresses.',
-      'September launch — exact dates TBD, do not invent dates.',
+      'First class targeting Saturday, Nov 7, 2026 — venue and time not yet confirmed. Do not publish a location until confirmed.',
       'Booking: pilatesandmommy.com/classes',
     ],
   },

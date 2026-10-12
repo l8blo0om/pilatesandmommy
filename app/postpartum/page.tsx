@@ -31,7 +31,7 @@ const challenges = [
     title: 'Core Weakness & Back Pain',
     short: 'When your powerhouse feels powerless',
     desc: 'Nine months of carrying extra weight, hormonal ligament relaxation, and the demands of newborn care (constant bending, lifting, feeding) leave most postpartum mamas with chronic back pain and a disconnected core.',
-    pilates: 'The Pilates method was literally built around "the powerhouse" — the deep core system. Our postpartum classes rebuild this system layer by layer, alleviating back pain while preventing future injury.',
+    pilates: 'The Pilates method was literally built around "the powerhouse" — the deep core system. Our postpartum classes rebuild this system layer by layer — thoughtful strength work that may help manage discomfort and improve everyday function.',
     icon: '💪',
   },
   {

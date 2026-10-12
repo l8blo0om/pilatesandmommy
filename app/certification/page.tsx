@@ -13,8 +13,8 @@ export const metadata = {
 
 const modules = [
   { num: '01', title: 'Foundations of Maternal Anatomy', desc: 'The pregnant and postpartum body — physiology, biomechanics, and structural changes across trimesters.' },
-  { num: '02', title: 'The Pelvic Floor & Core System', desc: 'Comprehensive training on pelvic floor function, assessment, and how to teach safe, effective core work.' },
-  { num: '03', title: 'Trimester-by-Trimester Programming', desc: 'Safely modify and progress clients through each stage of pregnancy with evidence-based protocols.' },
+  { num: '02', title: 'The Pelvic Floor & Core System', desc: 'Pelvic floor function, screening considerations, contraindications, referral indicators — and how to teach safe, effective core work within scope.' },
+  { num: '03', title: 'Trimester-by-Trimester Programming', desc: 'Modifications and class programming for each stage of pregnancy, grounded in current guidance and clear scope-of-practice boundaries.' },
   { num: '04', title: 'Postpartum Recovery Protocols', desc: 'Return-to-movement timelines, diastasis recti, C-section recovery, and hormonal considerations.' },
   { num: '05', title: 'Teaching Methodology', desc: 'Cueing, communication, class design, and the art of holding space for mothers in transition.' },
   { num: '06', title: 'Business & Brand Building', desc: 'Market your niche, build client trust, price your services, and grow a profitable maternal wellness practice.' },
@@ -107,13 +107,13 @@ export default function CertificationPage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)', fontWeight: 300, lineHeight: 1.8 }}>
-                A scholarship dancer, PhD, and the creator of Mamilates — one of the first
-                Mommy & Me Pilates formats in the country — Dr. Bishop built this curriculum
+                A scholarship dancer, PhD, and the creator of Mamilates — her original
+                Mommy & Me Pilates format — Dr. Bishop built this curriculum
                 from lived experience, academic rigor, and two decades in maternal movement.
               </p>
               <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)', fontWeight: 300, lineHeight: 1.8 }}>
                 She doesn't teach what she read. She teaches what she discovered when
-                Pilates healed the injury that years of professional dance left behind.
+                Pilates helped her move differently in a body that years of professional dance had worn down.
               </p>
             </div>
             <Link href="/about" style={{
@@ -159,8 +159,8 @@ export default function CertificationPage() {
               'Certified Pilates instructors adding a maternal wellness specialty',
               'Personal trainers expanding into prenatal and postpartum work',
               'Yoga teachers building Pilates-based movement offerings',
-              'Physical therapists seeking a movement-based clinical complement',
-              'New instructors launching directly into a high-demand niche',
+              'Physical therapists and birth workers adding a movement-education layer',
+              'Movement professionals ready to specialize — a prior teaching credential is required',
               'Doulas and birth workers adding embodied movement to their practice',
             ].map((item) => (
               <div key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>

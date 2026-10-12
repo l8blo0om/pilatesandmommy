@@ -11,8 +11,9 @@ const timeline = [
   { year: 'Amherst', label: 'Bachelor of Arts', detail: 'Amherst College — with studies at Mt. Holyoke & Smith' },
   { year: 'Certification', label: 'NDI Dance Educator', detail: 'National Dance Institute scholarship' },
   { year: 'Michigan', label: 'PhD, Comparative Literature', detail: 'University of Michigan' },
-  { year: '2007', label: 'Pilates Certified', detail: 'Mat & Machine — after results "so profound" she had to teach it' },
-  { year: '2009', label: 'Created Mamilates', detail: 'One of the first Mommy & Me Pilates formats in the country, born at the birth of her son Reza' },
+  { year: '2007', label: 'Mat Pilates Certified', detail: 'After results "so profound" she had to teach it' },
+  { year: '2009', label: 'Created Mamilates', detail: 'Her original Mommy & Me Pilates format, born at the birth of her son Reza' },
+  { year: '2022', label: 'Comprehensive Machine Certified', detail: 'Full apparatus certification — reformer, Cadillac, chair' },
   { year: 'Now', label: 'Pilates & Mommy', detail: 'Instructor · Educator · Founder' },
 ];
 
@@ -89,20 +90,21 @@ export default function AboutPage() {
               Then came the University of Michigan, and a PhD in Comparative Literature.
               Somewhere between dissertation chapters, she pressed play on a Windsor Pilates DVD
               at home. The results were, in her words, <em style={{ fontStyle: 'italic', color: '#1B9E9E' }}>so profound</em> that
-              she immediately pursued certification in mat and machine Pilates — completing it in 2007.
+              she pursued her mat Pilates certification, completing it in 2007. Fifteen years later,
+              she added comprehensive machine certification — the full apparatus.
             </p>
 
             <p style={{ fontSize: '1.15rem', color: '#3a3a3a', fontWeight: 300, lineHeight: 1.85 }}>
-              In 2009, at the birth of her son Reza, she created Mamilates — one of the first
-              Mommy & Me Pilates formats in the country. A cross between Gymboree and Windsor Pilates,
+              In 2009, at the birth of her son Reza, she created Mamilates — her original
+              Mommy & Me Pilates format. A cross between Gymboree and Windsor Pilates,
               she described it. She taught it in NYC, Long Island, and Buffalo before eventually
               bringing the work south to Columbia, SC.
             </p>
 
             <p style={{ fontSize: '1.15rem', color: '#3a3a3a', fontWeight: 300, lineHeight: 1.85 }}>
-              Today she teaches at Club Pilates in Forest Acres, holds an appointment as Assistant
-              Professor at Allen University, and runs Pilates & Mommy as a living expression of
-              everything she has learned about bodies, resilience, and what women are capable of.
+              Today she teaches at Club Pilates in Forest Acres and runs Pilates & Mommy as a
+              living expression of everything she has learned about bodies, resilience, and what
+              women are capable of.
             </p>
           </div>
         </div>
@@ -217,8 +219,8 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gap: '3rem' }}>
             {[
               {
-                heading: 'Movement is medicine.',
-                body: 'Pilates healed an injury that dance created and two decades of medicine never resolved. That is not a coincidence. The body responds to intelligent, consistent movement — and Niia has made it her life\'s work to teach exactly that.',
+                heading: 'Movement changes everything.',
+                body: 'Pilates helped Niia move differently in a body that had hurt for years — a knee that dance wore down and nothing else had touched. That is not a coincidence. The body responds to intelligent, consistent movement — and Niia has made it her life\'s work to teach exactly that.',
               },
               {
                 heading: 'Expertise and warmth are not opposites.',
