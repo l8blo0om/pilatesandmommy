@@ -80,11 +80,10 @@ export default function HomePage() {
       {/* BRAND PILLARS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-stone-100 border border-stone-100 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-100 border border-stone-100 rounded-2xl overflow-hidden">
             {[
               { icon: '🧘‍♀️', title: 'Classes', sub: 'Book in-studio or virtual', href: '/classes' },
               { icon: '🏆', title: 'Certify', sub: 'Pilates & Mommy worldwide', href: '/certification' },
-              { icon: '🛍️', title: 'Shop', sub: 'Curated wellness goods', href: '/shop' },
               { icon: '💬', title: 'Community', sub: 'Moms supporting moms', href: '/community' },
             ].map((p) => (
               <Link key={p.title} href={p.href}

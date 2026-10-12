@@ -10,7 +10,6 @@ const links = [
   { href: '/classes', label: 'Classes' },
   { href: '/postpartum', label: 'The Postpartum Body' },
   { href: '/certification', label: 'Certification' },
-  { href: '/shop', label: 'Shop' },
   { href: '/community', label: 'Community' },
   { href: '/contact', label: 'Contact' },
 ];

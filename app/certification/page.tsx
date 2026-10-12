@@ -6,7 +6,7 @@ export const metadata = {
   description: 'A maternal movement Pilates specialization developed by Dr. Niia Bishop. Train online. Teach with authority. Change careers.',
   openGraph: {
     title: 'Pilates & Mommy Certification',
-    description: 'Train online with Dr. Niia Bishop. Specialize in prenatal and postpartum Pilates.',
+    description: 'Train online with Dr. Niia Bishop. Specialize in Mommy & Me and postpartum Pilates.',
     images: [{ url: '/logo-icon-pink-bg.png', width: 1024, height: 1024, alt: 'Pilates & Mommy — felted kangaroo and joey logo' }],
   },
 };

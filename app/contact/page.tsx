@@ -49,7 +49,6 @@ export default function ContactPage() {
                   <option value="">Select a topic</option>
                   <option>Booking a Class</option>
                   <option>LA Certification</option>
-                  <option>Shop / Products</option>
                   <option>Community Membership</option>
                   <option>Private Sessions</option>
                   <option>Corporate / Group</option>

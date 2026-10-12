@@ -37,7 +37,6 @@ export default function Footer() {
               { href: '/classes', label: 'Classes & Booking' },
               { href: '/postpartum', label: 'The Postpartum Body' },
               { href: '/certification', label: 'Get Certified' },
-              { href: '/shop', label: 'Shop' },
               { href: '/community', label: 'Community' },
             ].map((link) => (
               <Link key={link.href} href={link.href}
