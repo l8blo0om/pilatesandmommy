@@ -10,7 +10,7 @@ const timeline = [
   { year: 'Scholarship', label: 'Alvin Ailey School of Dance', detail: 'Ballet · Modern · African · Jazz' },
   { year: 'Amherst', label: 'Bachelor of Arts', detail: 'Amherst College — with studies at Mt. Holyoke & Smith' },
   { year: 'Certification', label: 'NDI Dance Educator', detail: 'National Dance Institute scholarship' },
-  { year: 'Michigan', label: 'PhD, Comparative Literature', detail: 'University of Michigan' },
+  { year: 'Michigan', label: 'MA & PhD, Comparative Literature', detail: 'University of Michigan' },
   { year: '2007', label: 'Mat Pilates Certified', detail: 'After results "so profound" she had to teach it' },
   { year: '2009', label: 'Created Mamilates', detail: 'Her original Mommy & Me Pilates format, born at the birth of her son Reza' },
   { year: '2022', label: 'Comprehensive Machine Certified', detail: 'Full apparatus certification — reformer, Cadillac, chair' },
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </p>
 
             <p style={{ fontSize: '1.15rem', color: '#3a3a3a', fontWeight: 300, lineHeight: 1.85 }}>
-              Then came the University of Michigan, and a PhD in Comparative Literature.
+              Then came the University of Michigan — an MA, then a PhD in Comparative Literature.
               Somewhere between dissertation chapters, she pressed play on a Windsor Pilates DVD
               at home. The results were, in her words, <em style={{ fontStyle: 'italic', color: '#1B9E9E' }}>so profound</em> that
               she pursued her mat Pilates certification, completing it in 2007. Fifteen years later,

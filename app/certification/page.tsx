@@ -93,7 +93,7 @@ export default function CertificationPage() {
                 Dr. Niia Bishop
               </p>
               <p style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.1em', textTransform: 'uppercase', lineHeight: 1.8 }}>
-                PhD · Alvin Ailey Scholar · NDI Certified<br />Comprehensive Pilates Instructor
+                BA, Amherst College · MA &amp; PhD, University of Michigan<br />Alvin Ailey Scholar · NDI Certified · Comprehensive Pilates Instructor
               </p>
             </div>
           </div>
